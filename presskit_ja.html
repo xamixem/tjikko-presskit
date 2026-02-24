@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence of the Tjikko — プレスキット</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #05090f;
+    --navy: #0d1b2e;
+    --blue-dark: #1B3A5C;
+    --green: #109d62;
+    --green-bright: #4DDB8A;
+    --green-yellow: #A8F040;
+    --cyan: #7EECD4;
+    --white: #e8f4f0;
+    --text: #c8ddd5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--black);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: radial-gradient(ellipse at 50% 60%, #1a3a2a 0%, #0a1a2e 40%, #05090f 100%);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 30% 70%, rgba(16,157,98,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 30%, rgba(126,236,212,0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--green);
+    text-transform: uppercase;
+    border: 1px solid rgba(16,157,98,0.3);
+    padding: 0.4em 1.2em;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 0 0 40px rgba(77,219,138,0.4), 0 0 80px rgba(77,219,138,0.1);
+    line-height: 1.1;
+    margin-bottom: 0.3em;
+    animation: fadeIn 1s 0.2s ease both;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    letter-spacing: 0.4em;
+    color: var(--green-bright);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s 0.4s ease both;
+  }
+
+  .hero-pitch {
+    max-width: 600px;
+    font-size: 1.05rem;
+    color: var(--text);
+    opacity: 0.85;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 300;
+    animation: fadeIn 1s 0.6s ease both;
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeIn 1s 0.8s ease both;
+  }
+
+  .btn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    padding: 0.7em 1.8em;
+    border: 1px solid var(--green);
+    color: var(--green-bright);
+    transition: all 0.3s;
+    text-transform: uppercase;
+  }
+
+  .btn:hover {
+    background: var(--green);
+    color: var(--black);
+  }
+
+  .btn.primary {
+    background: var(--green);
+    color: var(--black);
+  }
+
+  .btn.primary:hover {
+    background: var(--green-bright);
+    border-color: var(--green-bright);
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 5rem 0;
+    border-top: 1px solid rgba(16,157,98,0.1);
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    opacity: 0.7;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(77,219,138,0.2);
+  }
+
+  h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1rem;
+    color: var(--green-bright);
+    font-weight: 400;
+    margin: 2rem 0 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+  }
+
+  /* FACTSHEET */
+  .factsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    border: 1px solid rgba(16,157,98,0.15);
+  }
+
+  .fact-item {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(16,157,98,0.1);
+    border-right: 1px solid rgba(16,157,98,0.1);
+  }
+
+  .fact-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .fact-value {
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+
+  /* FRUITS */
+  .fruits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(16,157,98,0.1);
+    margin: 2rem 0;
+  }
+
+  .fruit-item {
+    background: var(--black);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fruit-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .fruit-spring::before { background: var(--cyan); }
+  .fruit-summer::before { background: #f0a840; }
+  .fruit-autumn::before { background: #8b4ddb; }
+  .fruit-winter::before { background: #7eecd4; }
+
+  .fruit-season {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.3rem;
+    color: var(--green-bright);
+  }
+
+  .fruit-name {
+    font-size: 0.85rem;
+    color: var(--white);
+    opacity: 0.8;
+  }
+
+  /* FEATURES */
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 0.4em 1em;
+    border: 1px solid rgba(16,157,98,0.3);
+    color: var(--green-bright);
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  /* REMASTER */
+  .remaster-box {
+    border: 1px solid rgba(16,157,98,0.3);
+    padding: 2rem;
+    background: rgba(16,157,98,0.03);
+    position: relative;
+  }
+
+  .remaster-box::before {
+    content: '✦ REMASTERED EDITION';
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    color: var(--green);
+    position: absolute;
+    top: -0.6em;
+    left: 1.5rem;
+    background: var(--black);
+    padding: 0 0.5rem;
+  }
+
+  /* CREDITS */
+  .credits-block {
+    margin-bottom: 2rem;
+  }
+
+  .credits-names {
+    font-size: 0.85rem;
+    color: var(--text);
+    opacity: 0.7;
+    line-height: 2;
+  }
+
+  .translators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .translator-item {
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+
+  .translator-lang {
+    color: var(--green-bright);
+    font-size: 0.75rem;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    background: rgba(16,157,98,0.05);
+    border: 1px solid rgba(16,157,98,0.2);
+    padding: 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    font-size: 0.85rem;
+  }
+
+  .contact-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-item a {
+    color: var(--cyan);
+    text-decoration: none;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--green);
+    margin: 2rem 0;
+    opacity: 0.5;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid rgba(16,157,98,0.1);
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--green);
+    opacity: 0.4;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .fruits-grid { grid-template-columns: 1fr; }
+    .contact-box { flex-direction: column; gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Press Kit — 日本語版</div>
+  <h1 class="hero-title">Essence of the Tjikko</h1>
+  <div class="hero-subtitle">Prologue</div>
+  <p class="hero-pitch">植物と人間のハイブリッドが、忘れられた植物学研究所の深部で目覚める。季節の果実を吸収して能力を変化させ、環境パズルを解き明かし、光へ向かって7階分を登れ――手作り感あふれるレトロ3DゼルダライクなアドベンチャーRPG。</p>
+  <div class="hero-links">
+    <a class="btn primary" href="https://store.steampowered.com/app/1783740" target="_blank">Steam ページ</a>
+    <a class="btn" href="mailto:m.carcaillon@gmail.com">お問い合わせ</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- FACTSHEET -->
+  <section>
+    <div class="section-label">基本情報</div>
+    <h2>Factsheet</h2>
+    <div class="factsheet-grid">
+      <div class="fact-item">
+        <div class="fact-label">開発者</div>
+        <div class="fact-value">Maxime Carcaillon<br><small style="opacity:0.6">La Revria Studio</small></div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">プラットフォーム</div>
+        <div class="fact-value">Windows (Steam)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">ジャンル</div>
+        <div class="fact-value">パズルアドベンチャー</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">プレイ時間</div>
+        <div class="fact-value">約2時間</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">リリース日</div>
+        <div class="fact-value">2022年2月（初版）<br>2026年2月22日（リマスター版）</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">価格</div>
+        <div class="fact-value">無料デモあり</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">言語</div>
+        <div class="fact-value">10言語対応</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">ゲームエンジン</div>
+        <div class="fact-value">Unreal Engine 5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section>
+    <div class="section-label">ゲームについて</div>
+    <h2>Description</h2>
+
+    <p>『Essence of the Tjikko』は、地下7階建ての植物学研究所を舞台にしたレトロ3Dパズルアドベンチャーだ。30以上の相互につながった部屋からなる垂直ダンジョンで、シンプルなアクションが組み合わさり、予想外の解法を生み出す。</p>
+
+    <p>ゲームプレイは基本的なメカニクスで構成されている――段差の登攀、木箱を押す、エネルギー球を運ぶ、泳ぐ。しかしそこに、能力と外見を変える4つの季節の果実が重なり合う。これらのシンプルなツールが、好奇心（あるいは力技）に応えるパズル解法を生み出す：</p>
+
+    <div class="fruits-grid">
+      <div class="fruit-item fruit-spring">
+        <div class="fruit-season">SPRING — 春</div>
+        <div class="fruit-name">水面でバウンド</div>
+      </div>
+      <div class="fruit-item fruit-summer">
+        <div class="fruit-season">SUMMER — 夏</div>
+        <div class="fruit-name">灼熱のスピード</div>
+      </div>
+      <div class="fruit-item fruit-autumn">
+        <div class="fruit-season">AUTUMN — 秋</div>
+        <div class="fruit-name">霊的なビジョン</div>
+      </div>
+      <div class="fruit-item fruit-winter">
+        <div class="fruit-season">WINTER — 冬</div>
+        <div class="fruit-name">氷結ジャンプ</div>
+      </div>
+    </div>
+
+    <p>この世界では、植物のネットワークがオペレーティングシステムのように機能している――根はケーブル、樹液はデータ、植物メカニズムはコンピュータのように入力に反応する。自然とテクノロジーはここで同じ言語を話し、半植物・半人間の主人公はその両方に精通している。環境そのものが物語を語り、コレクタブルとさらなる謎で探索を報いる。</p>
+
+    <p>ゲームはレトロな4:3のアスペクト比を採用している――単なるノスタルジーではなく、意図的な芸術的選択だ。カメラ・UI・キャラクターの関係が、シミュレーションよりもおとぎ話に近い感覚をもたらす。ワイドスクリーンより没入感は低いが、想像力をより刺激する。世界は絵本のイラストのようにフレームに収まっている。</p>
+
+    <p>ゼルダシリーズの偉大なタイトルが持つダンジョンにインスパイアされながら、独自の物語を紡ぐ――幼年期、成長、そして光へ向かう本能の寓話。</p>
+
+    <div class="divider"></div>
+
+    <div class="remaster-box">
+      <p style="margin-bottom:0.8rem">4年間の開発を経て、本作はUnreal Engine 5で完全に再構築された。照明とテクスチャの全面見直し、新UIシステム、季節の果実メカニクスの拡張と新ビジュアルエフェクト、難易度とコレクタブルの再調整、50以上のバグ修正。</p>
+      <p style="margin:0;opacity:0.6;font-size:0.85rem">2026年2月22日リリース――ゼルダ40周年記念日の翌日に。</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>機能</h3>
+    <div class="features-list">
+      <span class="feature-tag">季節の果実による変身</span>
+      <span class="feature-tag">創発的なパズル解法</span>
+      <span class="feature-tag">7階建て垂直ダンジョン</span>
+      <span class="feature-tag">レトロ4:3の美学</span>
+      <span class="feature-tag">30以上のユニークな部屋</span>
+      <span class="feature-tag">無料デモ配信中</span>
+      <span class="feature-tag">フルコントローラー対応</span>
+      <span class="feature-tag">10言語対応</span>
+      <span class="feature-tag">プレイ時間 約2時間</span>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section>
+    <div class="section-label">開発の歩み</div>
+    <h2>History</h2>
+
+    <p>Essence of the Tjikkoはアヌシーで生まれた――自然が壮大な劇場で演じる絵のような街。澄んだ湖がその舞台となり、山々がキャンバスとなり、それぞれの季節を異なる幕として縁取る。2018年当時Ubisoftに勤務しながら、私は余暇にエルデヴェンの世界を書き始めた。アヌシーの地形とバイオームのアーキタイプ、環境的象徴主義を結びつけようとしながら――地質学を学んでいた頃に読んだ『昔話の魔力』から考え続けてきたテーマだ。</p>
+
+    <p>2021年、世界が不確実性に包まれたとき、アーティストとして意味のあるものを作るべき時だと感じた。フリーランスとして活動を始め、Tjikkoの最初のバージョンを完成させるために9ヶ月という期限を自分に課した。2022年2月にリリースし、小さなイベントに持ち込み、ストリーマーたちに紹介した……結果は誠実だったが、未完成だった。まだ準備ができていない時に棚に戻すゲームのように――いつかまた挑戦できることを知りながら。</p>
+
+    <p>その後の数年間は、業界での修練の時代だった。そして2025年9月、すべての星が揃ったとき、私は明確な目標を持ってTjikkoに戻った：2026年2月21日、ゼルダ40周年記念日に向けたリマスター版の完成。</p>
+
+    <p>リマスターは、あの年月が私に教えてくれたすべてを反映している。Unreal Engine 5への移行は、UIナビゲーションシステムをゼロから再構築し、キャラクターを作り直し、経験の浅い頃の自分が書いたコードを解きほぐすことを意味した。ゲームの少なくとも半分が――技術的にも芸術的にも――作り直された。</p>
+
+    <p>振り返れば、出会った人々の支えによって、Tjikkoとともに私も成長してきた。元同僚たちが重要な場面でデザインとビジュアルに目を貸してくれた。10言語のネイティブスピーカーたちが、この奇妙な植物学的物語を自分たちの言葉で語り継いでくれるほど信頼してくれた。そして友人フィリップ・ラインハートの音楽が、この世界に感情的な鼓動を与えてくれた。</p>
+
+    <p style="font-style:italic;opacity:0.6">次の幕が何をもたらすか、今から楽しみでならない。</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <div class="section-label">開発者について</div>
+    <h2>La Revria Studio</h2>
+
+    <p>La Revria Studioはマクシム・カルカイヨン――パリを拠点とするフランス人のシニアレベルアーティスト兼ソロインディーゲーム開発者。元UbisoftおよびGame Atelierに在籍。</p>
+
+    <p>地質学者として訓練を受けた後にゲームアートに転向したマクシムは、地形、自然システム、景観の象徴性によって形成された独自の視点でワールドビルディングに取り組む。Ubisoftで『Tom Clancy's The Division 2』や『AGOS』などのタイトルに貢献した後、自分が見たいと思うゲームを開発するためにLa Revria Studioを設立した。</p>
+
+    <p>La Revria Studioは、コンポーザー、翻訳者、プレイテスターなど、プロジェクトを信じるコラボレーターのネットワークを持つ一人の制作体制だ。目標は、芸術的な野心とレトロな魂を持つ、手作りのアドベンチャーゲームを届けること。</p>
+  </section>
+
+  <!-- BRANDING -->
+  <section>
+    <div class="section-label">ブランディング</div>
+    <h2>Branding Guidelines</h2>
+
+    <p>ロゴは常に暗い背景の上に使用し、グロウ効果を保持すること。ロゴの色変更、引き伸ばし、ドロップシャドウの追加は禁止。キーアートのコンポジションからヒーローを切り取らないこと。主人公を指す際は「主人公」または「植物の子」を使用すること――名前はまだ明かされていない。</p>
+
+    <h3>メインカラー</h3>
+    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:0.8rem">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem">
+        <div style="width:50px;height:50px;background:#109d62;border:1px solid rgba(255,255,255,0.1)"></div>
+        <span style="font-size:0.7rem;opacity:0.6">#109d62</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem">
+        <div style="width:50px;height:50px;background:#4DDB8A;border:1px solid rgba(255,255,255,0.1)"></div>
+        <span style="font-size:0.7rem;opacity:0.6">#4DDB8A</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem">
+        <div style="width:50px;height:50px;background:#7EECD4;border:1px solid rgba(255,255,255,0.1)"></div>
+        <span style="font-size:0.7rem;opacity:0.6">#7EECD4</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem">
+        <div style="width:50px;height:50px;background:#0d1b2e;border:1px solid rgba(255,255,255,0.1)"></div>
+        <span style="font-size:0.7rem;opacity:0.6">#0d1b2e</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.4rem">
+        <div style="width:50px;height:50px;background:#05090f;border:1px solid rgba(255,255,255,0.1)"></div>
+        <span style="font-size:0.7rem;opacity:0.6">#05090f</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDITS -->
+  <section>
+    <div class="section-label">クレジット</div>
+    <h2>Credits</h2>
+
+    <div class="credits-block">
+      <h3>開発</h3>
+      <div class="credits-names">Maxime Carcaillon — ゲームデザイン、アート、プログラミング</div>
+    </div>
+
+    <div class="credits-block">
+      <h3>音楽</h3>
+      <div class="credits-names">Philippe Reinhart</div>
+    </div>
+
+    <div class="credits-block">
+      <h3>翻訳者</h3>
+      <div class="translators-grid">
+        <div class="translator-item"><span class="translator-lang">简体中文</span><br>Christina Dong</div>
+        <div class="translator-item"><span class="translator-lang">Deutsch</span><br>Camille Andrelan, Tim Taesler</div>
+        <div class="translator-item"><span class="translator-lang">Español</span><br>Solène Tremblay</div>
+        <div class="translator-item"><span class="translator-lang">Italiano</span><br>Giulia Faqioli</div>
+        <div class="translator-item"><span class="translator-lang">한국어</span><br>Fukugaki Momoka</div>
+        <div class="translator-item"><span class="translator-lang">日本語</span><br>Alexis Lapajon, Yuri Fujimura</div>
+        <div class="translator-item"><span class="translator-lang">Polski</span><br>Tiffany Kendziolka</div>
+        <div class="translator-item"><span class="translator-lang">Русский</span><br>Cristina Fesiuc</div>
+      </div>
+    </div>
+
+    <div class="credits-block">
+      <h3>プレイテスター</h3>
+      <div class="credits-names">Alice Andrieu, Benjamin Couvin, Antonio Cordeiro, Benoit Croenne, Suzanne Dang, Theo Dorp, Matthias Dubray, Mhamed Elmezoued, Mathieu Hurel, Victor Jarnoux, Pierrick Jenny, Boris Kolimaga, Jonathan Lorber, Ulysse Mauffret, Alexia Moleon, Mélanie Pango, Margot Pelloquet, Leny Puicouypoul, Arnaud Roug, Kevin Soulage, Tiphanie Timores, Jules Tinaz, Maël Villa, Charlie Wagner</div>
+    </div>
+
+    <div class="credits-block">
+      <h3>スペシャルサンクス</h3>
+      <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
+      <div class="credits-names" style="margin-top:1rem;font-style:italic;opacity:0.5">New3dgeチームへ――Mika、Diana、Mickael、Guillaume、Anthony……<br>そして妹、父、母へ――心から愛しています！</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <div class="section-label">連絡先</div>
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <div class="contact-label">開発者</div>
+        Maxime Carcaillon
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">メール</div>
+        <a href="mailto:m.carcaillon@gmail.com">m.carcaillon@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Steam</div>
+        <a href="https://store.steampowered.com/app/1783740" target="_blank">App ID 1783740</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">リンク集</div>
+        <a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>LA REVRIA STUDIO — ESSENCE OF THE TJIKKO © 2026</footer>
+
+</body>
+</html>
