@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essence of the Tjikko — プレスキット</title>
+<title>Essence of the Tjikko - プレスキット</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -372,13 +372,47 @@
     .fruits-grid { grid-template-columns: 1fr; }
     .contact-box { flex-direction: column; gap: 1.5rem; }
   }
+
+  /* LIGHTBOX */
+  .lb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lb-overlay.active { display: flex; }
+  .lb-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+  }
+  .lb-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .lb-close:hover { color: white; }
+  .section img, .gallery img, .gallery-row img, .desc-grid img {
+    cursor: zoom-in;
+  }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-badge">Press Kit — 日本語版</div>
+  <div class="hero-badge">Press Kit - 日本語版</div>
   <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LibraryLogo2.png" alt="Essence of the Tjikko Logo" style="width:min(420px,80vw);margin-bottom:1.5rem;animation:fadeIn 1s 0.1s ease both;position:relative;z-index:1">
   <div class="hero-subtitle">Prologue</div>
   <p class="hero-pitch">植物と人間のハイブリッドが、忘れられた植物学研究所の深部で目覚める。季節の果実を吸収して能力を変化させ、環境パズルを解き明かし、光へ向かって7階分を登れ――手作り感あふれるレトロ3DゼルダライクなアドベンチャーRPG。</p>
@@ -441,19 +475,19 @@
 
     <div class="fruits-grid">
       <div class="fruit-item fruit-spring">
-        <div class="fruit-season">SPRING — 春</div>
+        <div class="fruit-season">SPRING - 春</div>
         <div class="fruit-name">水面でバウンド</div>
       </div>
       <div class="fruit-item fruit-summer">
-        <div class="fruit-season">SUMMER — 夏</div>
+        <div class="fruit-season">SUMMER - 夏</div>
         <div class="fruit-name">灼熱のスピード</div>
       </div>
       <div class="fruit-item fruit-autumn">
-        <div class="fruit-season">AUTUMN — 秋</div>
+        <div class="fruit-season">AUTUMN - 秋</div>
         <div class="fruit-name">霊的なビジョン</div>
       </div>
       <div class="fruit-item fruit-winter">
-        <div class="fruit-season">WINTER — 冬</div>
+        <div class="fruit-season">WINTER - 冬</div>
         <div class="fruit-name">氷結ジャンプ</div>
       </div>
     </div>
@@ -588,7 +622,7 @@
 
     <div class="credits-block">
       <h3>開発</h3>
-      <div class="credits-names">Maxime Carcaillon — ゲームデザイン、アート、プログラミング</div>
+      <div class="credits-names">Maxime Carcaillon - ゲームデザイン、アート、プログラミング</div>
     </div>
 
     <div class="credits-block">
@@ -602,7 +636,7 @@
         <div class="translator-item"><span class="translator-lang">简体中文</span><br>Christina Dong</div>
         <div class="translator-item"><span class="translator-lang">Deutsch</span><br>Camille Andrelan, Tim Taesler</div>
         <div class="translator-item"><span class="translator-lang">Español</span><br>Solène Tremblay</div>
-        <div class="translator-item"><span class="translator-lang">Italiano</span><br>Giulia Faqioli</div>
+        <div class="translator-item"><span class="translator-lang">Italiano</span><br>Giulia Fagioli</div>
         <div class="translator-item"><span class="translator-lang">한국어</span><br>Fukugaki Momoka</div>
         <div class="translator-item"><span class="translator-lang">日本語</span><br>Alexis Lapajon, Yuri Fujimura</div>
         <div class="translator-item"><span class="translator-lang">Polski</span><br>Tiffany Kendziolka</div>
@@ -612,12 +646,12 @@
 
     <div class="credits-block">
       <h3>プレイテスター</h3>
-      <div class="credits-names">Alice Andrieu, Benjamin Couvin, Antonio Cordeiro, Benoit Croenne, Suzanne Dang, Theo Dorp, Matthias Dubray, Mhamed Elmezoued, Mathieu Hurel, Victor Jarnoux, Pierrick Jenny, Boris Kolimaga, Jonathan Lorber, Ulysse Mauffret, Alexia Moleon, Mélanie Pango, Margot Pelloquet, Leny Puicouypoul, Arnaud Roug, Kevin Soulage, Tiphanie Timores, Jules Tinaz, Maël Villa, Charlie Wagner</div>
+      <div class="credits-names">Alice Andrieu, Benjamin Couvin, Antonio Cordeiro, Benoit Croenne, Suzanne Dang, Theo Dorp, Matthias Dubray, Mhamed Elmezoued, Mathieu Hurel, Victor Jarnoux, Pierrick Jenny, Boris Kolimaga, Jonathan Lorber, Ulysse Mauffret, Alexia Moleon, Mélanie Pango, Margot Pelloquet, Leny Puicouypoul, Arnaud Roy, Kevin Soulage, Tiphanie Timores, Jules Tinaz, Maël Villa, Charlie Wagner</div>
     </div>
 
     <div class="credits-block">
       <h3>スペシャルサンクス</h3>
-      <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
+      <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy, "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
       <div class="credits-names" style="margin-top:1rem;font-style:italic;opacity:0.5">New3dgeチームへ――Mika、Diana、Mickael、Guillaume、Anthony……<br>そして妹、父、母へ――心から愛しています！</div>
     </div>
   </section>
@@ -633,12 +667,9 @@
       </div>
       <div class="contact-item">
         <div class="contact-label">メール</div>
-        <a href="/cdn-cgi/l/email-protection#0b6625686a79686a62676764654b6c666a626725686466"><span class="__cf_email__" data-cfemail="b2df9cd1d3c0d1d3dbdededddcf2d5dfd3dbde9cd1dddf">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4924672a283b2a282025252627092e24282025672a2624">[email&#160;protected]</a>
       </div>
       <div class="contact-item">
         <div class="contact-label">Steam</div>
         <a href="https://store.steampowered.com/app/1783740" target="_blank">App ID 1783740</a>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">リンク集</div>
-        <a href="https://mylink.l
+      </
