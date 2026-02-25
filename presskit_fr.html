@@ -449,7 +449,7 @@ footer {
     <p class="hero-pitch">Un enfant-fougère s'éveille au fond d'un laboratoire botanique oublié. Mange des fruits saisonniers pour transformer tes capacités, résous des énigmes environnementales, et hisse-toi vers la lumière du Tjikko.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="https://store.steampowered.com/app/1783740" target="_blank">Page Steam</a>
-      <a class="btn btn-ghost" href="/cdn-cgi/l/email-protection#fa97d4999b88999b9396969594ba9d979b9396d4999597">Contact</a>
+      <a class="btn btn-ghost" href="https://mylink.la/tjikkogame" target="_blank">Contact</a>
     </div>
   </div>
   <div class="hero-right">
@@ -572,7 +572,7 @@ footer {
       <div class="about-card">
         <div class="about-name">Maxime Carcaillon</div>
         <div class="about-role">Solo Développeur · Paris, France</div>
-        <div class="about-links"><a href="/cdn-cgi/l/email-protection#cca1e2afadbeafada5a0a0a3a28caba1ada5a0e2afa3a1"><span class="__cf_email__" data-cfemail="4c21622f2d3e2f2d25202023220c2b212d2520622f2321">[email&#160;protected]</span></a><a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a><a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
+        <div class="about-links">m.carcaillon@gmail.com<a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a><a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
         </div>
       </div>
       <div>
@@ -645,7 +645,7 @@ footer {
       </div>
       <div>
         <div class="contact-block-label">Email</div>
-        <div class="contact-block-val"><a href="/cdn-cgi/l/email-protection#bad794d9dbc8d9dbd3d6d6d5d4faddd7dbd3d694d9d5d7"><span class="__cf_email__" data-cfemail="91fcbff2f0e3f2f0f8fdfdfeffd1f6fcf0f8fdbff2fefc">[email&#160;protected]</span></a></div>
+        <div class="contact-block-val">m.carcaillon@gmail.com</div>
       </div>
       <div>
         <div class="contact-block-label">Steam</div>
@@ -653,4 +653,48 @@ footer {
       </div>
       <div>
         <div class="contact-block-label">Bluesky</div>
-        <div
+        <div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div>
+      </div>
+      <div>
+        <div class="contact-block-label">Twitter / X</div>
+        <div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div>
+      </div>
+      <div>
+        <div class="contact-block-label">Instagram</div>
+        <div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Background.png" alt="Key Art" style="width:100%;display:block;filter:brightness(0.8) saturate(0.9)">
+
+<footer style="margin-top:0">La Revria Studio — Essence of the Tjikko © 2026</footer>
+
+<div class="lb-overlay" id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close" onclick="closeLightbox()">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+  document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
+  function openLightbox(src) {
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img[src*="Gameplay"], img[src*="Render"], img[src*="Vertical"], img[src*="Background"]').forEach(function(img) {
+      img.addEventListener('click', function() { openLightbox(this.src); });
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>
