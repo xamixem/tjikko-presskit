@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essence of the Tjikko — Press Kit</title>
+<title>Essence of the Tjikko - Press Kit</title>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -29,7 +29,8 @@ body {
   color: var(--text);
   font-family: 'Crimson Text', serif;
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.9;
+  font-size: 18px;
   overflow-x: hidden;
 }
 
@@ -153,11 +154,12 @@ body::after {
   font-size: 0.62rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--cyan);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  font-weight: 600;
 }
 
 .section-eyebrow::before {
@@ -186,7 +188,7 @@ h3 {
   margin: 2rem 0 0.6rem;
 }
 
-p { font-size: 1.15rem; margin-bottom: 1.3rem; color: var(--text); max-width: 680px; }
+p { font-size: 1.15rem; margin-bottom: 1.3rem; color: var(--text); max-width: 680px; text-align: justify; text-indent: 1.5em; }
 
 .factsheet {
   display: grid;
@@ -206,9 +208,9 @@ p { font-size: 1.15rem; margin-bottom: 1.3rem; color: var(--text); max-width: 68
   font-size: 0.58rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--cyan);
   margin-bottom: 0.4rem;
-  opacity: 0.8;
+  font-weight: 600;
 }
 
 .fact-value { font-family: 'Crimson Text', serif; font-size: 0.9rem; color: var(--white); line-height: 1.5; }
@@ -283,8 +285,9 @@ p { font-size: 1.15rem; margin-bottom: 1.3rem; color: var(--text); max-width: 68
   font-size: 0.6rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--cyan);
   margin-bottom: 0.6rem;
+  font-weight: 600;
 }
 
 .remaster p { max-width: none; margin-bottom: 0; }
@@ -352,10 +355,11 @@ p { font-size: 1.15rem; margin-bottom: 1.3rem; color: var(--text); max-width: 68
   font-size: 0.6rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--cyan);
   margin-bottom: 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(77,219,138,0.1);
+  border-bottom: 1px solid rgba(126,236,212,0.15);
+  font-weight: 600;
 }
 
 .credits-names { font-size: 0.85rem; color: var(--text-dim); line-height: 2; }
@@ -402,6 +406,40 @@ footer {
   .gallery-row { grid-template-columns: 1fr 1fr; }
   .contact-strip { flex-direction: column; gap: 1.5rem; }
 }
+
+  /* LIGHTBOX */
+  .lb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lb-overlay.active { display: flex; }
+  .lb-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 60px rgba(0,0,0,0.8);
+  }
+  .lb-close {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .lb-close:hover { color: white; }
+  section img, .gallery img, .gallery-row img, .desc-grid img {
+    cursor: zoom-in;
+  }
 </style>
 </head>
 <body>
@@ -409,9 +447,9 @@ footer {
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-left">
-    <div class="press-kit-label">Press Kit — 2026</div>
+    <div class="press-kit-label">Press Kit - 2026</div>
     <h1 class="hero-tagline">A botanical dungeon, seven floors deep.</h1>
-    <p class="hero-pitch">A plant-human hybrid awakens in the depths of a forgotten botanical lab. Absorb seasonal fruits to shapeshift your abilities, unravel environmental puzzles, and climb toward the light.</p>
+    <p class="hero-pitch">A plant-human hybrid awakens in the depths of a forgotten botanical lab. Absorb seasonal fruits to shapeshift your abilities, unravel environmental puzzles, and rise toward the light of the Tjikko.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="https://store.steampowered.com/app/1783740" target="_blank">Steam Page</a>
       <a class="btn btn-ghost" href="/cdn-cgi/l/email-protection#0d60236e6c7f6e6c64616162634d6a606c6461236e6260">Contact</a>
@@ -444,17 +482,17 @@ footer {
     <h2>Description</h2>
     <div class="desc-grid">
       <div class="desc-text">
-        <p>Essence of the Tjikko is a retro 3D puzzle-adventure set inside a 7-floor underground botanical laboratory — a vertical dungeon of 30+ interconnected rooms where simple actions combine into surprising solutions.</p>
-        <p>The gameplay is built on basic mechanics: climbing ledges, pushing crates, carrying energy bulbs, swimming. But they are layered with 4 seasonal fruits that change your abilities and your appearance — unlocking emergent puzzle-solving that rewards curiosity (or brute force):</p>
+        <p>Essence of the Tjikko is a retro 3D puzzle-adventure set inside a 7-floor underground botanical laboratory - a vertical dungeon of 30+ interconnected rooms where simple actions combine into surprising solutions.</p>
+        <p>The gameplay is built on basic mechanics: climbing ledges, pushing crates, carrying energy bulbs, swimming. But they are layered with 4 seasonal fruits that change your abilities and your appearance - unlocking emergent puzzle-solving that rewards curiosity (or brute force):</p>
         <div class="seasons">
           <div class="season season-spring"><div class="season-bar"></div><div class="season-name">Spring</div><div class="season-ability">Water bouncing</div></div>
           <div class="season season-summer"><div class="season-bar"></div><div class="season-name">Summer</div><div class="season-ability">Blazing speed</div></div>
           <div class="season season-autumn"><div class="season-bar"></div><div class="season-name">Autumn</div><div class="season-ability">Ethereal vision</div></div>
           <div class="season season-winter"><div class="season-bar"></div><div class="season-name">Winter</div><div class="season-ability">Frosted jump</div></div>
         </div>
-        <p>The world treats plant networks like operating systems — roots as cables, sap as data, botanical mechanisms responding to inputs like living computers. Nature and technology share the same language here, and the hero, half-plant, half-child, is fluent in both.</p>
-        <p>Visually, the game is a sincere handcraft, made with love and care. The choice of a 4:3 aspect ratio isn't nostalgia for its own sake — it's a deliberate artistic decision. Those proportions feel closer to a fairy tale than a simulation. The world fits inside the frame like an illustration in a storybook.</p>
-        <p style="font-style:italic;opacity:0.7;font-family:'IM Fell English',serif">Inspired by the dungeons of the greatest Zelda titles, but telling its own story — an allegory of childhood, growth, and the instinct to reach the light.</p>
+        <p>The world treats plant networks like operating systems - roots as cables, sap as data, botanical mechanisms responding to inputs like living computers. Nature and technology share the same language here, and the hero, half-plant, half-child, is fluent in both.</p>
+        <p>Visually, the game is a sincere handcraft, made with love and care. The choice of a 4:3 aspect ratio isn't nostalgia for its own sake - it's a deliberate artistic decision. Those proportions feel closer to a fairy tale than a simulation. The world fits inside the frame like an illustration in a storybook.</p>
+        <p style="font-style:italic;opacity:0.7;font-family:'IM Fell English',serif">Inspired by the dungeons of the greatest Zelda titles, but telling its own story - an allegory of childhood, growth, and the instinct to reach the light.</p>
       </div>
       <div>
         <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Vertical.png" alt="Key Art" style="width:100%;display:block;margin-bottom:1.5rem">
@@ -468,7 +506,7 @@ footer {
       <div class="remaster-year">2026</div>
       <div>
         <div class="remaster-label">✦ Remastered Edition</div>
-        <p>Completely rebuilt in Unreal Engine 5 after 4 years of development. Reworked lighting and textures, new UI system, extended fruit transformation mechanics with new visual effects, rebalanced difficulty and collectibles, 50+ bug fixes. Released February 22nd — the day after Zelda's 40th anniversary.</p>
+        <p>Completely rebuilt in Unreal Engine 5 after 4 years of development. Reworked lighting and textures, new UI system, extended fruit transformation mechanics with new visual effects, rebalanced difficulty and collectibles, 50+ bug fixes. Released February 22nd - the day after Zelda's 40th anniversary.</p>
       </div>
     </div>
 
@@ -516,12 +554,12 @@ footer {
     <h2>History</h2>
     <div class="history-text">
       <div>
-        <p>Essence of the Tjikko was born in Annecy — a picturesque city where nature performs in a grand theatre. A pristine lake as its stage, mountains as a canvas, framing each season like a different act. Working at Ubisoft in 2018, I started writing the world of Erdeven in my spare time, trying to bridge Annecy's topology with biome archetypes and environmental symbolism — something I'd been thinking about since reading <em>The Uses of Enchantment</em> during my geology studies.</p>
-        <p>When the world grew uncertain in 2021, it felt like the right moment to build something meaningful as an artist. I launched as a freelance, and gave myself 9 months to ship the first version of Tjikko. It came out in February 2022 — I brought it to small conventions, introduced it to streamers... The result was honest but incomplete. Like a game you put back on the shelf when you're not quite ready for it yet — knowing you'll come back when you are.</p>
+        <p>Essence of the Tjikko was born in Annecy - a picturesque city where nature performs in a grand theatre. A pristine lake as its stage, mountains as a canvas, framing each season like a different act. Working at Ubisoft in 2018, I started writing the world of Erdeven in my spare time, trying to bridge Annecy's topology with biome archetypes and environmental symbolism - something I'd been thinking about since reading <em>The Uses of Enchantment</em> during my geology studies.</p>
+        <p>When the world grew uncertain in 2021, it felt like the right moment to build something meaningful as an artist. I launched as a freelance, and gave myself 9 months to ship the first version of Tjikko. It came out in February 2022 - I brought it to small conventions, introduced it to streamers... The result was honest but incomplete. Like a game you put back on the shelf when you're not quite ready for it yet - knowing you'll come back when you are.</p>
       </div>
       <div>
         <p>The years that followed were formative ones in the industry, to say the least. And when the stars finally aligned in September 2025, I returned to Tjikko with a clear objective: the Remastered Edition for Zelda's 40th anniversary on February 21st, 2026.</p>
-        <p>The remaster reflects everything those years taught me. At least half the game was remade — technically and artistically. The lighting, the textures, the level design details, the difficulty balance...</p>
+        <p>The remaster reflects everything those years taught me. At least half the game was remade - technically and artistically. The lighting, the textures, the level design details, the difficulty balance...</p>
         <p>Looking back, Tjikko and I evolved through this journey, thanks to the support of the friends I met. Former colleagues lent their eyes and instincts to design and visuals. Native speakers across 10 languages trusted the story enough to carry it into their own tongue. And my friend Philippe Reinhart's music gave the world its emotional heartbeat.</p>
         <p style="font-style:italic;opacity:0.65;font-family:'IM Fell English',serif">It may be a long way to create a game, but it's totally worth it to see it growing. And I can't wait to see the next act.</p>
       </div>
@@ -531,7 +569,7 @@ footer {
   <div class="section">
     <div class="section-eyebrow">What's next</div>
     <h2>Next Steps</h2>
-    <p><em>Essence of the Tjikko — Prologue</em> is the first chapter of a larger adventure. The full game envisions a vast underground world: five dungeons, a central hub carved beneath the roots of the great Tjikko, with subterranean lakes, temples, jungles and villages — a civilization frozen in time. The next chapter is currently in development.</p>
+    <p><em>Essence of the Tjikko - Prologue</em> is the first chapter of a larger adventure. The full game envisions a vast underground world: five dungeons, a central hub carved beneath the roots of the great Tjikko, with subterranean lakes, temples, jungles and villages - a civilization frozen in time. The next chapter is currently in development.</p>
   </div>
 
   <div class="section">
@@ -542,14 +580,14 @@ footer {
         <div class="about-name">Maxime Carcaillon</div>
         <div class="about-role">Solo Developer · Paris, France</div>
         <div class="about-links">
-          <a href="mailto:m.carcaillon@gmail.com">m.carcaillon@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#9bf6b5f8fae9f8faf2f7f7f4f5dbfcf6faf2f7b5f8f4f6"><span class="__cf_email__" data-cfemail="d3befdb0b2a1b0b2babfbfbcbd93b4beb2babffdb0bcbe">[email&#160;protected]</span></a>
           <a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a>
           <a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
         </div>
       </div>
       <div>
-        <p>Trained as a geologist before turning to game art, Maxime brings an unusual eye to world-building — one shaped by topology, natural systems, and the symbolism of landscapes. After contributing to titles like <em>Tom Clancy's The Division 2</em> and <em>AGOS</em> at Ubisoft, he founded La Revria Studio to develop the games he always wanted to see exist.</p>
-        <p>La Revria Studio is a one-person operation with a network of collaborators — composers, translators, playtesters — who believe in the project. The goal: handcrafted adventure games with artistic ambition and a retro soul.</p>
+        <p>Trained as a geologist before turning to game art, Maxime brings an unusual eye to world-building - one shaped by topology, natural systems, and the symbolism of landscapes. After contributing to titles like <em>Tom Clancy's The Division 2</em> and <em>AGOS</em> at Ubisoft, he founded La Revria Studio to develop the games he always wanted to see exist.</p>
+        <p>La Revria Studio is a one-person operation with a network of collaborators - composers, translators, playtesters - who believe in the project. The goal: handcrafted adventure games with artistic ambition and a retro soul.</p>
       </div>
     </div>
   </div>
@@ -584,7 +622,7 @@ footer {
     <h2>The people behind the game</h2>
     <div class="credits-section">
       <div class="credits-title">Development</div>
-      <div class="credits-names">Maxime Carcaillon — Game Design, Art, Programming</div>
+      <div class="credits-names">Maxime Carcaillon - Game Design, Art, Programming</div>
     </div>
     <div class="credits-section">
       <div class="credits-title">Music</div>
@@ -610,8 +648,8 @@ footer {
     <div class="credits-section">
       <div class="credits-title">Special Thanks</div>
       <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy, "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
-      <div class="credits-note">To the New3dge team — Mika, Diana, Mickael, Guillaume, Anthony…</div>
-      <div class="credits-note">And to my sister, my father and my mother — I love you so much!</div>
+      <div class="credits-note">To the New3dge team - Mika, Diana, Mickael, Guillaume, Anthony…</div>
+      <div class="credits-note">And to my sister, my father and my mother - I love you so much!</div>
     </div>
   </div>
 
@@ -626,7 +664,7 @@ footer {
       </div>
       <div>
         <div class="contact-block-label">Email</div>
-        <div class="contact-block-val"><a href="mailto:m.carcaillon@gmail.com">m.carcaillon@gmail.com</a></div>
+        <div class="contact-block-val"><a href="/cdn-cgi/l/email-protection#1c71327f7d6e7f7d75707073725c7b717d7570327f7371"><span class="__cf_email__" data-cfemail="5a3774393b28393b33363635341a3d373b333674393537">[email&#160;protected]</span></a></div>
       </div>
       <div>
         <div class="contact-block-label">Steam</div>
@@ -639,14 +677,4 @@ footer {
       <div>
         <div class="contact-block-label">Twitter / X</div>
         <div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div>
-      </div>
-      <div>
-        <div class="contact-block-label">Instagram</div>
-        <div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<img src="https://raw.githubusercontent.com
+      </d
