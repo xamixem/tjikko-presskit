@@ -19,6 +19,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: hidden; }
 
   body {
     background-color: var(--black);
@@ -406,6 +407,81 @@
   .section img, .gallery img, .gallery-row img, .desc-grid img {
     cursor: zoom-in;
   }
+
+  /* ── MOBILE FIXES ── */
+  @media (max-width: 768px) {
+    /* Overflow global */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* Hero */
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 3rem; }
+    .hero-right { display: none; }
+    .hero-left { padding: 2.5rem 1.5rem 2rem; background: rgba(10,14,9,0.88); }
+    .hero-tagline { font-size: 1.8rem; }
+    .hero-pitch { font-size: 1rem; }
+
+    /* Remaster block 2026 */
+    .remaster { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+    .remaster-year { font-size: 2.5rem; line-height: 1; margin-bottom: 0; }
+
+    /* Description */
+    .desc-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .desc-grid > div:last-child { display: none; } /* cacher les images côté droit sur mobile */
+
+    /* Seasons */
+    .seasons { grid-template-columns: 1fr 1fr; }
+
+    /* History */
+    .history-text { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* Gallery */
+    .gallery { grid-template-columns: 1fr; }
+    .gallery img[style*="grid-column:span 2"] { grid-column: span 1 !important; }
+    .gallery-row { grid-template-columns: 1fr 1fr; }
+
+    /* Factsheet */
+    .factsheet { grid-template-columns: 1fr 1fr; }
+
+    /* Contact */
+    .contact-strip { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+
+    /* Wrap padding */
+    .wrap { padding: 0 1.2rem; }
+    .section { padding: 3.5rem 0; }
+
+    /* Branding logo */
+    div[style*="grid-template-columns:auto 1fr"] { 
+      grid-template-columns: 1fr !important; 
+      text-align: center;
+    }
+    div[style*="grid-template-columns:auto 1fr"] img { 
+      width: 200px !important; 
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Features wrap */
+    .features { gap: 0.4rem; }
+    .feature { font-size: 0.7rem; }
+
+    /* Translators */
+    .translators-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Text justify sur mobile moins lisible */
+    p { text-align: left; text-indent: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .factsheet { grid-template-columns: 1fr; }
+    .seasons { grid-template-columns: 1fr; }
+    .gallery-row { grid-template-columns: 1fr; }
+    .translators-grid { grid-template-columns: 1fr; }
+    .hero-tagline { font-size: 1.5rem; }
+    h2 { font-size: 1.6rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -415,7 +491,7 @@
   <div class="hero-badge">Press Kit - 日本語版</div>
   <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LibraryLogo2.png" alt="Essence of the Tjikko Logo" style="width:min(420px,80vw);margin-bottom:1.5rem;animation:fadeIn 1s 0.1s ease both;position:relative;z-index:1">
   <div class="hero-subtitle">Prologue</div>
-  <p class="hero-pitch">植物と人間のハイブリッドが、忘れられた植物学研究所の深部で目覚める。季節の果実を吸収して能力を変化させ、環境パズルを解き明かし、光へ向かって7階分を登れ――手作り感あふれるレトロ3DゼルダライクなアドベンチャーRPG。</p>
+  <p class="hero-pitch">一輪の花が咲き、緑の子が神秘的な植物学研究所の奥深くで目覚めます。この場所の秘密を解き明かし、不思議な効果をもつ果実を食べ、謎を解き、壁を登り、跳躍し——チッコの光へと身を引き上げてください。</p>
   <div class="hero-links">
     <a class="btn primary" href="https://store.steampowered.com/app/1783740" target="_blank">Steam ページ</a>
     <a class="btn" href="https://mylink.la/tjikkogame" target="_blank">お問い合わせ</a>
@@ -430,7 +506,7 @@
     <h2>Factsheet</h2>
     <div class="factsheet-grid">
       <div class="fact-item">
-        <div class="fact-label">開発者</div>
+        <div class="fact-label">開発者について</div>
         <div class="fact-value">Maxime Carcaillon<br><small style="opacity:0.6">La Revria Studio</small></div>
       </div>
       <div class="fact-item">
@@ -446,7 +522,7 @@
         <div class="fact-value">約2時間</div>
       </div>
       <div class="fact-item">
-        <div class="fact-label">リリース日</div>
+        <div class="fact-label">リリース日日</div>
         <div class="fact-value">2022年2月（初版）<br>2026年2月22日（リマスター版）</div>
       </div>
       <div class="fact-item">
@@ -454,11 +530,11 @@
         <div class="fact-value">無料デモあり</div>
       </div>
       <div class="fact-item">
-        <div class="fact-label">言語</div>
-        <div class="fact-value">10言語対応</div>
+        <div class="fact-label">対応言語</div>
+        <div class="fact-value">10対応言語対応</div>
       </div>
       <div class="fact-item">
-        <div class="fact-label">ゲームエンジン</div>
+        <div class="fact-label">ゲーム使用エンジン</div>
         <div class="fact-value">Unreal Engine 5</div>
       </div>
     </div>
@@ -466,7 +542,7 @@
 
   <!-- DESCRIPTION -->
   <section>
-    <div class="section-label">ゲームについて</div>
+    <div class="section-label">ゲーム内容</div>
     <h2>Description</h2>
 
     <p>『Essence of the Tjikko』は、地下7階建ての植物学研究所を舞台にしたレトロ3Dパズルアドベンチャーだ。30以上の相互につながった部屋からなる垂直ダンジョンで、シンプルなアクションが組み合わさり、予想外の解法を生み出す。</p>
@@ -475,24 +551,24 @@
 
     <div class="fruits-grid">
       <div class="fruit-item fruit-spring">
-        <div class="fruit-season">SPRING - 春</div>
+        <div class="fruit-season">SPRING - 春（ハイドロプラム）</div>
         <div class="fruit-name">水面でバウンド</div>
       </div>
       <div class="fruit-item fruit-summer">
-        <div class="fruit-season">SUMMER - 夏</div>
+        <div class="fruit-season">SUMMER - 夏（パイロベリー）</div>
         <div class="fruit-name">灼熱のスピード</div>
       </div>
       <div class="fruit-item fruit-autumn">
-        <div class="fruit-season">AUTUMN - 秋</div>
+        <div class="fruit-season">AUTUMN - 秋（メモナッツ）</div>
         <div class="fruit-name">霊的なビジョン</div>
       </div>
       <div class="fruit-item fruit-winter">
-        <div class="fruit-season">WINTER - 冬</div>
-        <div class="fruit-name">氷結ジャンプ</div>
+        <div class="fruit-season">WINTER - 冬（クリオピア）</div>
+        <div class="fruit-name">霜のジャンプ</div>
       </div>
     </div>
 
-    <p>この世界では、植物のネットワークがオペレーティングシステムのように機能している――根はケーブル、樹液はデータ、植物メカニズムはコンピュータのように入力に反応する。自然とテクノロジーはここで同じ言語を話し、半植物・半人間の主人公はその両方に精通している。環境そのものが物語を語り、コレクタブルとさらなる謎で探索を報いる。</p>
+    <p>この世界では、植物のネットワークがオペレーティングシステムのように機能している――根はケーブル、樹液はデータ、植物メカニズムはコンピュータのように入力に反応する。自然とテクノロジーはここで同じ対応言語を話し、半植物・半人間の主人公はその両方に精通している。環境そのものが物語を語り、コレクタブルとさらなる謎で探索を報いる。</p>
 
     <p>ゲームはレトロな4:3のアスペクト比を採用している――単なるノスタルジーではなく、意図的な芸術的選択だ。カメラ・UI・キャラクターの関係が、シミュレーションよりもおとぎ話に近い感覚をもたらす。ワイドスクリーンより没入感は低いが、想像力をより刺激する。世界は絵本のイラストのようにフレームに収まっている。</p>
 
@@ -502,7 +578,7 @@
 
     <div class="remaster-box">
       <p style="margin-bottom:0.8rem">4年間の開発を経て、本作はUnreal Engine 5で完全に再構築された。照明とテクスチャの全面見直し、新UIシステム、季節の果実メカニクスの拡張と新ビジュアルエフェクト、難易度とコレクタブルの再調整、50以上のバグ修正。</p>
-      <p style="margin:0;opacity:0.6;font-size:0.85rem">2026年2月22日リリース――ゼルダ40周年記念日の翌日に。</p>
+      <p style="margin:0;opacity:0.6;font-size:0.85rem">2026年2月22日リリース日――ゼルダ40周年記念日の翌日に。</p>
     </div>
 
     <div class="divider"></div>
@@ -516,7 +592,7 @@
       <span class="feature-tag">30以上のユニークな部屋</span>
       <span class="feature-tag">無料デモ配信中</span>
       <span class="feature-tag">フルコントローラー対応</span>
-      <span class="feature-tag">10言語対応</span>
+      <span class="feature-tag">10対応言語対応</span>
       <span class="feature-tag">プレイ時間 約2時間</span>
     </div>
   </section>
@@ -560,23 +636,23 @@
 
     <p>Essence of the Tjikkoはアヌシーで生まれた――自然が壮大な劇場で演じる絵のような街。澄んだ湖がその舞台となり、山々がキャンバスとなり、それぞれの季節を異なる幕として縁取る。2018年当時Ubisoftに勤務しながら、私は余暇にエルデヴェンの世界を書き始めた。アヌシーの地形とバイオームのアーキタイプ、環境的象徴主義を結びつけようとしながら――地質学を学んでいた頃に読んだ『昔話の魔力』から考え続けてきたテーマだ。</p>
 
-    <p>2021年、世界が不確実性に包まれたとき、アーティストとして意味のあるものを作るべき時だと感じた。フリーランスとして活動を始め、Tjikkoの最初のバージョンを完成させるために9ヶ月という期限を自分に課した。2022年2月にリリースし、小さなイベントに持ち込み、ストリーマーたちに紹介した……結果は誠実だったが、未完成だった。まだ準備ができていない時に棚に戻すゲームのように――いつかまた挑戦できることを知りながら。</p>
+    <p>2021年、世界が不確実性に包まれたとき、アーティストとして意味のあるものを作るべき時だと感じた。フリーランスとして活動を始め、Tjikkoの最初のバージョンを完成させるために9ヶ月という期限を自分に課した。2022年2月にリリース日し、小さなイベントに持ち込み、ストリーマーたちに紹介した……結果は誠実だったが、未完成だった。まだ準備ができていない時に棚に戻すゲームのように――いつかまた挑戦できることを知りながら。</p>
 
-    <p>その後の数年間は、業界での修練の時代だった。そして2025年9月、すべての星が揃ったとき、私は明確な目標を持ってTjikkoに戻った：2026年2月21日、ゼルダ40周年記念日に向けたリマスター版の完成。</p>
+    <p>その後の数年間は、業界での貴重な修練の時代でした。そして2025年9月、機が熟したとき、明確な目標を持ってTjikkoへと戻りました：ゼルダ40周年記念日である2026年2月21日に向けたリマスター版の完成です。</p>
 
     <p>リマスターは、あの年月が私に教えてくれたすべてを反映している。Unreal Engine 5への移行は、UIナビゲーションシステムをゼロから再構築し、キャラクターを作り直し、経験の浅い頃の自分が書いたコードを解きほぐすことを意味した。ゲームの少なくとも半分が――技術的にも芸術的にも――作り直された。</p>
 
-    <p>振り返れば、出会った人々の支えによって、Tjikkoとともに私も成長してきた。元同僚たちが重要な場面でデザインとビジュアルに目を貸してくれた。10言語のネイティブスピーカーたちが、この奇妙な植物学的物語を自分たちの言葉で語り継いでくれるほど信頼してくれた。そして友人フィリップ・ラインハートの音楽が、この世界に感情的な鼓動を与えてくれた。</p>
+    <p>振り返れば、出会った人々の支えによって、Tjikkoとともに私も成長してきた。元同僚たちが重要な場面でデザインとビジュアルに目を貸してくれた。10対応言語のネイティブスピーカーたちが、この奇妙な植物学的物語を自分たちの言葉で語り継いでくれるほど信頼してくれた。そして友人フィリップ・ラインハートの音楽が、この世界に感情的な鼓動を与えてくれた。</p>
 
     <p style="font-style:italic;opacity:0.6">次の幕が何をもたらすか、今から楽しみでならない。</p>
   </section>
 
   <!-- ABOUT -->
   <section>
-    <div class="section-label">開発者について</div>
+    <div class="section-label">開発者についてについて</div>
     <h2>La Revria Studio</h2>
 
-    <p>La Revria Studioはマクシム・カルカイヨン――パリを拠点とするフランス人のシニアレベルアーティスト兼ソロインディーゲーム開発者。元UbisoftおよびGame Atelierに在籍。</p>
+    <p>La Revria Studioはマクシム・カルカイヨン――パリを拠点とするフランス人のシニアレベルアーティスト兼ソロインディーゲーム開発者について。元UbisoftおよびGame Atelierに在籍。</p>
 
     <p>地質学者として訓練を受けた後にゲームアートに転向したマクシムは、地形、自然システム、景観の象徴性によって形成された独自の視点でワールドビルディングに取り組む。Ubisoftで『Tom Clancy's The Division 2』や『AGOS』などのタイトルに貢献した後、自分が見たいと思うゲームを開発するためにLa Revria Studioを設立した。</p>
 
@@ -622,7 +698,7 @@
 
     <div class="credits-block">
       <h3>開発</h3>
-      <div class="credits-names">Maxime Carcaillon - ゲームデザイン、アート、プログラミング</div>
+      <div class="credits-names">Maxime Carcaillon - ゲームデザイン・アート・プログラミング</div>
     </div>
 
     <div class="credits-block">
@@ -662,14 +738,12 @@
     <h2>Contact</h2>
     <div class="contact-box">
       <div class="contact-item">
-        <div class="contact-label">開発者</div>
+        <div class="contact-label">開発者について</div>
         Maxime Carcaillon
       </div>
       <div class="contact-item">
         <div class="contact-label">メール</div>
-        m.carcaillon@gmail.com
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94f9baf7f5e6f7f5fdf8f8fbfad4f3f9f5fdf8baf7fbf9">[email&#160;protected]</a>
       </div>
       <div class="contact-item">
-        <div class="contact-label">Steam</div>
-        <a href="https://store.steampowered.com/app/1783740" target="_blank">App ID 1783740</a>
-      </
+        <div class="contac
