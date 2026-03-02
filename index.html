@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essence of the Tjikko — Press Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #05090f;
+    --surface: #0a0e09;
+    --green: #109d62;
+    --cyan: #7EECD4;
+    --text: #c8d4c0;
+    --text-dim: #6b7c63;
+  }
+  html, body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IM Fell English', serif;
+    overflow-x: hidden;
+  }
+
+  /* Grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background:
+      linear-gradient(to bottom, rgba(5,9,15,0.7) 0%, rgba(5,9,15,0.5) 50%, rgba(5,9,15,0.9) 100%),
+      url('https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Banner copy.jpg') center/cover no-repeat;
+  }
+
+  .logo {
+    width: min(420px, 80vw);
+    margin-bottom: 2.5rem;
+    filter: drop-shadow(0 0 40px rgba(77,219,138,0.25));
+  }
+
+  .tagline {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--text-dim);
+    margin-bottom: 3.5rem;
+    max-width: 500px;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .lang-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 0.8rem;
+    border: 1px solid rgba(77,219,138,0.2);
+    background: rgba(10,14,9,0.6);
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+  }
+
+  .lang-btn:hover {
+    border-color: rgba(126,236,212,0.5);
+    background: rgba(77,219,138,0.07);
+    color: var(--cyan);
+    transform: translateY(-2px);
+  }
+
+  .lang-flag {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .lang-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .lang-native {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    font-style: italic;
+  }
+
+  .lang-btn.coming-soon {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .lang-btn.coming-soon .lang-name::after {
+    content: ' · soon';
+    opacity: 0.6;
+    font-style: italic;
+  }
+
+  .assets-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.8rem;
+    border: 1px solid rgba(77,219,138,0.35);
+    color: var(--cyan);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+  }
+
+  .assets-btn:hover {
+    background: rgba(77,219,138,0.07);
+    border-color: var(--cyan);
+  }
+
+  .footer {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    opacity: 0.4;
+    font-style: italic;
+  }
+
+  @media (max-width: 480px) {
+    .lang-grid { grid-template-columns: repeat(3, 1fr); }
+    .lang-flag { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <img class="logo" src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Essence of the Tjikko">
+  <p class="tagline">A botanical dungeon, seven floors deep.</p>
+
+  <div class="section-label">Press Kit — Select Language</div>
+
+  <div class="lang-grid">
+    <a class="lang-btn" href="presskit_en.html">
+      <span class="lang-flag">🇬🇧</span>
+      <span class="lang-name">English</span>
+      <span class="lang-native">English</span>
+    </a>
+    <a class="lang-btn" href="presskit_fr.html">
+      <span class="lang-flag">🇫🇷</span>
+      <span class="lang-name">French</span>
+      <span class="lang-native">Français</span>
+    </a>
+    <a class="lang-btn" href="presskit_ja.html">
+      <span class="lang-flag">🇯🇵</span>
+      <span class="lang-name">Japanese</span>
+      <span class="lang-native">日本語</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇩🇪</span>
+      <span class="lang-name">German</span>
+      <span class="lang-native">Deutsch</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇪🇸</span>
+      <span class="lang-name">Spanish</span>
+      <span class="lang-native">Español</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇮🇹</span>
+      <span class="lang-name">Italian</span>
+      <span class="lang-native">Italiano</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇵🇱</span>
+      <span class="lang-name">Polish</span>
+      <span class="lang-native">Polski</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇷🇺</span>
+      <span class="lang-name">Russian</span>
+      <span class="lang-native">Русский</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇰🇷</span>
+      <span class="lang-name">Korean</span>
+      <span class="lang-native">한국어</span>
+    </a>
+    <a class="lang-btn coming-soon" href="#">
+      <span class="lang-flag">🇨🇳</span>
+      <span class="lang-name">Chinese</span>
+      <span class="lang-native">中文</span>
+    </a>
+  </div>
+
+  <a class="assets-btn" href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=drive_link" target="_blank">
+    ⬇ Download Press Assets
+  </a>
+
+  <p class="footer">La Revria Studio — Essence of the Tjikko © 2026</p>
+</div>
+</body>
+</html>
