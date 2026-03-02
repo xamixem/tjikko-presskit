@@ -23,6 +23,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: hidden; }
 
 body {
   background-color: var(--paper);
@@ -393,8 +394,7 @@ footer {
   opacity: 0.4;
 }
 
-@media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; }
+
   .hero-right { display: none; }
   .hero-left { padding: 3rem 2rem; background: rgba(10,14,9,0.85); }
   .desc-grid, .history-text, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -437,6 +437,81 @@ footer {
   .section img, .gallery img, .gallery-row img, .desc-grid img {
     cursor: zoom-in;
   }
+
+  /* ── MOBILE FIXES ── */
+  @media (max-width: 768px) {
+    /* Overflow global */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+
+    /* Hero */
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-bottom: 3rem; }
+    .hero-right { display: none; }
+    .hero-left { padding: 2.5rem 1.5rem 2rem; background: rgba(10,14,9,0.88); }
+    .hero-tagline { font-size: 1.8rem; }
+    .hero-pitch { font-size: 1rem; }
+
+    /* Remaster block 2026 */
+    .remaster { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+    .remaster-year { font-size: 2.5rem; line-height: 1; margin-bottom: 0; }
+
+    /* Description */
+    .desc-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .desc-grid > div:last-child { display: none; } /* cacher les images côté droit sur mobile */
+
+    /* Seasons */
+    .seasons { grid-template-columns: 1fr 1fr; }
+
+    /* History */
+    .history-text { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* Gallery */
+    .gallery { grid-template-columns: 1fr; }
+    .gallery img[style*="grid-column:span 2"] { grid-column: span 1 !important; }
+    .gallery-row { grid-template-columns: 1fr 1fr; }
+
+    /* Factsheet */
+    .factsheet { grid-template-columns: 1fr 1fr; }
+
+    /* Contact */
+    .contact-strip { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+
+    /* Wrap padding */
+    .wrap { padding: 0 1.2rem; }
+    .section { padding: 3.5rem 0; }
+
+    /* Branding logo */
+    div[style*="grid-template-columns:auto 1fr"] { 
+      grid-template-columns: 1fr !important; 
+      text-align: center;
+    }
+    div[style*="grid-template-columns:auto 1fr"] img { 
+      width: 200px !important; 
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Features wrap */
+    .features { gap: 0.4rem; }
+    .feature { font-size: 0.7rem; }
+
+    /* Translators */
+    .translators-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Text justify sur mobile moins lisible */
+    p { text-align: left; text-indent: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .factsheet { grid-template-columns: 1fr; }
+    .seasons { grid-template-columns: 1fr; }
+    .gallery-row { grid-template-columns: 1fr; }
+    .translators-grid { grid-template-columns: 1fr; }
+    .hero-tagline { font-size: 1.5rem; }
+    h2 { font-size: 1.6rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -446,7 +521,7 @@ footer {
   <div class="hero-left">
     <div class="press-kit-label">Dossier de Presse - 2026</div>
     <h1 class="hero-tagline">Un donjon botanique, sept étages sous terre.</h1>
-    <p class="hero-pitch">Un enfant-fougère s'éveille au fond d'un laboratoire botanique oublié. Mange des fruits saisonniers pour transformer tes capacités, résous des énigmes environnementales, et hisse-toi vers la lumière du Tjikko.</p>
+    <p class="hero-pitch">Une fleur éclot et un enfant-fougère s'éveille au fond d'un mystérieux laboratoire botanique. Découvrez les secrets de ce lieu, mangez des fruits aux effets surprenants, résolvez des énigmes, grimpez, sautez, et hissez-vous vers la lumière du Tjikko.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="https://store.steampowered.com/app/1783740" target="_blank">Page Steam</a>
       <a class="btn btn-ghost" href="https://mylink.la/tjikkogame" target="_blank">Contact</a>
@@ -572,7 +647,7 @@ footer {
       <div class="about-card">
         <div class="about-name">Maxime Carcaillon</div>
         <div class="about-role">Solo Développeur · Paris, France</div>
-        <div class="about-links">m.carcaillon@gmail.com<a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a><a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
+        <div class="about-links"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93febdf0f2e1f0f2fafffffcfdd3f4fef2faffbdf0fcfe">[email&#160;protected]</a><a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a><a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
         </div>
       </div>
       <div>
@@ -594,6 +669,8 @@ footer {
         <h3>Couleurs saisonnières</h3>
         <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#4a5fa8"></div><div class="swatch-hex">Spring</div></div><div class="swatch"><div class="swatch-color" style="background:#c0392b"></div><div class="swatch-hex">Summer</div></div><div class="swatch"><div class="swatch-color" style="background:#c9922a"></div><div class="swatch-hex">Autumn</div></div><div class="swatch"><div class="swatch-color" style="background:#a8ddd4"></div><div class="swatch-hex">Winter</div></div>
         </div>
+
+    <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=drive_link" target="_blank" style="display:inline-block;margin-top:1.5rem;padding:0.7rem 1.4rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-size:0.85rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='rgba(77,219,138,0.08)'" onmouseout="this.style.background='none'">⬇ Télécharger les assets (logos, captures, artworks)</a>
       </div>
     </div>
   </div>
@@ -645,7 +722,7 @@ footer {
       </div>
       <div>
         <div class="contact-block-label">Email</div>
-        <div class="contact-block-val">m.carcaillon@gmail.com</div>
+        <div class="contact-block-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="264b0845475445474f4a4a494866414b474f4a0845494b">[email&#160;protected]</a></div>
       </div>
       <div>
         <div class="contact-block-label">Steam</div>
@@ -664,7 +741,12 @@ footer {
         <div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div>
       </div>
     </div>
-  </div>
+  
+      <div style="margin-top:2rem;padding:1.2rem 1.5rem;border:1px solid rgba(77,219,138,0.3);border-radius:4px;background:rgba(77,219,138,0.04)">
+        <div style="font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cyan);font-weight:600;margin-bottom:0.5rem">Presse & Créateurs</div>
+        <p style="margin:0;font-size:1rem">Une clé Steam est disponible sur demande pour la presse et les créateurs de contenu. Contactez via email ou <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a>.</p>
+      </div>
+</div>
 
 </div>
 
@@ -676,7 +758,7 @@ footer {
   <span class="lb-close" onclick="closeLightbox()">✕</span>
   <img id="lb-img" src="" alt="">
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
   function openLightbox(src) {
     document.getElementById('lb-img').src = src;
@@ -688,13 +770,4 @@ footer {
     document.body.style.overflow = '';
   }
   document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('img[src*="Gameplay"], img[src*="Render"], img[src*="Vertical"], img[src*="Background"]').forEach(function(img) {
-      img.addEventListener('click', function() { openLightbox(this.src); });
-    });
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeLightbox();
-  });
-</script>
-</body>
-</html>
+    doc
