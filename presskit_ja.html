@@ -743,7 +743,54 @@
       </div>
       <div class="contact-item">
         <div class="contact-label">メール</div>
-        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94f9baf7f5e6f7f5fdf8f8fbfad4f3f9f5fdf8baf7fbf9">[email&#160;protected]</a>
+        m.carcaillon@gmail.com
       </div>
       <div class="contact-item">
-        <div class="contac
+  <div class="section">
+    <div class="section-eyebrow">お問い合わせ</div>
+    <h2>コンタクト</h2>
+    <div class="contact-strip">
+      <div><div class="contact-block-label">開発者</div><div class="contact-block-val">Maxime Carcaillon</div></div>
+      <div><div class="contact-block-label">メール</div><div class="contact-block-val">m.carcaillon@gmail.com</div></div>
+      <div><div class="contact-block-label">Steam</div><div class="contact-block-val"><a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank">Steamページ</a></div></div>
+      <div><div class="contact-block-label">Bluesky</div><div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div></div>
+      <div><div class="contact-block-label">Twitter / X</div><div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div></div>
+      <div><div class="contact-block-label">Instagram</div><div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div></div>
+    </div>
+    <div style="margin-top:2rem;padding:1.2rem 1.5rem;border:1px solid rgba(77,219,138,0.3);border-radius:4px;background:rgba(77,219,138,0.04)">
+      <div style="font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cyan);font-weight:600;margin-bottom:0.8rem">メディア・ストリーマー・クリエイター向け</div>
+      <p style="margin:0 0 1rem;font-size:1rem">ご要望に応じてSteamキーをご提供しております。メールまたは <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a> よりお問い合わせください。</p>
+      <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=drive_link" target="_blank" style="display:inline-block;padding:0.6rem 1.2rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ アセットをダウンロード</a>
+    </div>
+  </div>
+
+</div>
+
+<img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Background.png" alt="Key Art" style="width:100%;display:block;filter:brightness(0.8) saturate(0.9)">
+
+<footer style="margin-top:0">La Revria Studio — Essence of the Tjikko © 2026</footer>
+
+<div class="lb-overlay" id="lightbox" onclick="closeLightbox()">
+  <span class="lb-close" onclick="closeLightbox()">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+  document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
+  function openLightbox(src) { document.getElementById('lb-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img[src*="Gameplay"], img[src*="Render"], img[src*="Vertical"], img[src*="Background"]').forEach(function(img) { img.addEventListener('click', function() { openLightbox(this.src); }); });
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+<div style="position:fixed;bottom:0;left:0;right:0;background:rgba(5,9,15,0.95);border-top:1px solid rgba(77,219,138,0.15);padding:0.6rem 1.5rem;display:flex;align-items:center;gap:1rem;z-index:9998;backdrop-filter:blur(8px);flex-wrap:wrap">
+  <a href="index.html" style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cyan);text-decoration:none;opacity:0.7;flex-shrink:0">← 全言語</a>
+  <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+    <a href="presskit_en.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">EN</a>
+    <a href="presskit_fr.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">FR</a>
+    <a href="presskit_ja.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.5);font-size:0.65rem;color:var(--cyan);text-decoration:none;font-family:'Cinzel',serif">JA</a>
+  </div>
+</div>
+</body>
+</html>
