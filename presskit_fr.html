@@ -62,7 +62,7 @@ body::after {
 
 .hero-left {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -71,8 +71,12 @@ body::after {
 }
 
 .hero-right {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -514,7 +518,9 @@ footer {
     margin-bottom: 0;
   }
   .section-part + .section-part {
-    margin-top: 4rem;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(77,219,138,0.12);
+    padding-top: 2rem;
   }
   .part-eyebrow {
     font-family: 'Cinzel', serif;
@@ -523,10 +529,10 @@ footer {
     text-transform: uppercase;
     color: var(--cyan);
     font-weight: 600;
-    padding: 3rem var(--pad) 0;
+    padding: 1.5rem var(--pad) 0;
     opacity: 0.9;
-    border-top: 1px solid rgba(77,219,138,0.12);
-    margin-top: 1rem;
+    border-top: none;
+    margin-top: 0;
   }
   .section-part:first-child .part-eyebrow {
     border-top: none;
