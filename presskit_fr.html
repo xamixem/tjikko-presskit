@@ -552,9 +552,14 @@ footer {
     <p class="hero-pitch">Une fleur éclot et un enfant-fougère s'éveille au fond d'un mystérieux laboratoire botanique. Découvrez les secrets de ce lieu, mangez des fruits aux effets surprenants, résolvez des énigmes, grimpez, sautez, et hissez-vous vers la lumière du Tjikko.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="https://store.steampowered.com/app/1783740" target="_blank">Page Steam</a>
+      <a class="btn btn-trailer" href="#trailer" onclick="document.getElementById('trailer').scrollIntoView({behavior:'smooth'});return false;">▶ Bande-annonce</a>
       <a class="btn btn-ghost" href="https://mylink.la/tjikkogame" target="_blank">Contact</a>
     </div>
   </div>
+  <div class="hero-right">
+    <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Essence of the Tjikko">
+  </div>
+</div>
 
 <div class="wrap">
 
@@ -605,19 +610,6 @@ footer {
           <p>Entièrement reconstruit dans Unreal Engine 5 après 4 ans de développement. Éclairages, textures et post-processing optimisés, nouveau système d'interface, système de fruits saisonniers étendu avec de nouveaux effets visuels, difficulté et collectibles rééquilibrés, plus de 50 corrections. Sorti le 22 février - le lendemain du 40e anniversaire de la licence Zelda.</p>
         </div>
       </div>
-
-      <h3>Caractéristiques</h3>
-      <div class="features">
-        <span class="feature">Transformations par fruits saisonniers</span>
-        <span class="feature">Résolution d'énigmes émergente</span>
-        <span class="feature">Donjon vertical de 7 étages</span>
-        <span class="feature">Esthétique rétro 4:3</span>
-        <span class="feature">30+ salles uniques</span>
-        <span class="feature">5€ (démo gratuite)</span>
-        <span class="feature">Support manette complet</span>
-        <span class="feature">10 langues</span>
-        <span class="feature">~2 heures</span>
-      </div>
     </div>
   </div>
 
@@ -628,7 +620,7 @@ footer {
     <div class="part-eyebrow">Médias</div>
 
     <div class="section">
-      <h2>Bande-annonce — Édition Remasterisée</h2>
+      <h2 id="trailer">Bande-annonce — Édition Remasterisée</h2>
       <div class="video-wrap">
         <iframe src="https://www.youtube.com/embed/zlH6HH8KiqU"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -747,7 +739,7 @@ footer {
       <h2>Contact</h2>
       <div class="contact-strip">
         <div><div class="contact-block-label">Développeur</div><div class="contact-block-val">Maxime Carcaillon</div></div>
-        <div><div class="contact-block-label">Email</div><div class="contact-block-val">m.carcaillon@gmail.com</div></div>
+        <div><div class="contact-block-label">Email</div><div class="contact-block-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="771a5914160514161e1b1b181937101a161e1b5914181a">[email&#160;protected]</a></div></div>
         <div><div class="contact-block-label">Steam</div><div class="contact-block-val"><a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank">Page Steam</a></div></div>
         <div><div class="contact-block-label">Bluesky</div><div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div></div>
         <div><div class="contact-block-label">Twitter / X</div><div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div></div>
@@ -799,7 +791,7 @@ footer {
   <span class="lb-close" onclick="closeLightbox()">✕</span>
   <img id="lb-img" src="" alt="">
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
   function openLightbox(src) { document.getElementById('lb-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
   function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
