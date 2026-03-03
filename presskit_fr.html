@@ -144,6 +144,8 @@ body::after {
 .btn-primary:hover { background: var(--green-bright); border-color: var(--green-bright); }
 .btn-ghost { background: transparent; border-color: rgba(196,212,188,0.3); color: var(--text); }
 .btn-ghost:hover { border-color: var(--green); color: var(--green-bright); }
+  .btn-trailer { background: #c0392b; border-color: #c0392b; color: #0a0e09; }
+  .btn-trailer:hover { background: #e04030; border-color: #e04030; }
 
 .wrap { max-width: 1000px; margin: 0 auto; padding: 0 3rem; }
 
@@ -540,6 +542,20 @@ footer {
   .section h2 {
     margin-top: 0.5rem;
   }
+
+  .streamer-card {
+    display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;
+    border:1px solid rgba(77,219,138,0.15);text-decoration:none;
+    color:var(--text);transition:all 0.2s;
+  }
+  .streamer-card span { font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em; }
+  .streamer-card:hover { border-color:rgba(77,219,138,0.4);color:var(--cyan); }
+  .social-link {
+    display:flex;align-items:center;gap:0.5rem;color:var(--text-dim);
+    text-decoration:none;font-family:'Cinzel',serif;font-size:0.65rem;
+    letter-spacing:0.12em;transition:color 0.2s;
+  }
+  .social-link:hover { color:var(--cyan); }
 </style>
 </head>
 <body>
@@ -735,17 +751,6 @@ footer {
       </div>
     </div>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <div class="contact-strip">
-        <div><div class="contact-block-label">Développeur</div><div class="contact-block-val">Maxime Carcaillon</div></div>
-        <div><div class="contact-block-label">Email</div><div class="contact-block-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="771a5914160514161e1b1b181937101a161e1b5914181a">[email&#160;protected]</a></div></div>
-        <div><div class="contact-block-label">Steam</div><div class="contact-block-val"><a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank">Page Steam</a></div></div>
-        <div><div class="contact-block-label">Bluesky</div><div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div></div>
-        <div><div class="contact-block-label">Twitter / X</div><div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div></div>
-        <div><div class="contact-block-label">Instagram</div><div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div></div>
-      </div>
-    </div>
   </div>
 
   <!-- ══════════════════════════════════════════
@@ -755,10 +760,8 @@ footer {
     <div class="part-eyebrow">Presse, Streamers &amp; Créateurs</div>
 
     <div class="section">
-      <h2>Clés &amp; ressources</h2>
+      <h2>Clés Steam</h2>
       <p style="margin-bottom:1.5rem">Une clé Steam est disponible sur demande pour la presse et les créateurs de contenu. Contactez via email ou <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a>.</p>
-
-      <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.7rem 1.4rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase;margin-bottom:2.5rem">⬇ TÉLÉCHARGER LES ASSETS</a>
 
       <h3 style="margin-top:0">Ils y ont joué</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:2.5rem">
@@ -768,9 +771,12 @@ footer {
         <a href="https://www.twitch.tv/chochklah" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Chochklah</span></a>
       </div>
 
-      <h3>Identité visuelle</h3>
+      <h2>Identité visuelle</h2>
       <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem">
-        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Logo" style="width:280px;filter:drop-shadow(0 0 30px rgba(77,219,138,0.3))">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:1rem">
+          <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Logo" style="width:280px;filter:drop-shadow(0 0 30px rgba(77,219,138,0.3))">
+          <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.55rem 1.1rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ ASSETS</a>
+        </div>
         <div>
           <h3 style="margin-top:0">Palette de couleurs</h3>
           <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#109d62"></div><div class="swatch-hex">#109d62</div></div><div class="swatch"><div class="swatch-color" style="background:#4DDB8A"></div><div class="swatch-hex">#4DDB8A</div></div><div class="swatch"><div class="swatch-color" style="background:#7EECD4"></div><div class="swatch-hex">#7EECD4</div></div><div class="swatch"><div class="swatch-color" style="background:#0d1b2e"></div><div class="swatch-hex">#0d1b2e</div></div><div class="swatch"><div class="swatch-color" style="background:#05090f"></div><div class="swatch-hex">#05090f</div></div></div>
@@ -778,6 +784,35 @@ footer {
           <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#4a5fa8"></div><div class="swatch-hex">Printemps</div></div><div class="swatch"><div class="swatch-color" style="background:#c0392b"></div><div class="swatch-hex">Été</div></div><div class="swatch"><div class="swatch-color" style="background:#c9922a"></div><div class="swatch-hex">Automne</div></div><div class="swatch"><div class="swatch-color" style="background:#a8ddd4"></div><div class="swatch-hex">Hiver</div></div></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PARTIE 6 : CONTACT
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">Contact</div>
+    <div class="section">
+      <h2>Nous contacter</h2>
+    <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank" class="social-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0z"/></svg>
+        Steam
+      </a>
+      <a href="https://x.com/TjikkoGame" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @TjikkoGame
+      </a>
+      <a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 600 530" fill="currentColor"><path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>
+        @tjikko-dev
+      </a>
+      <a href="https://www.instagram.com/tjikko.dev" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @tjikko.dev
+      </a>
+      <span style="color:var(--text-dim);font-size:0.9rem">m.carcaillon@gmail.com</span>
+    </div>
     </div>
   </div>
 
