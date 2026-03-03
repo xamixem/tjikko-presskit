@@ -512,6 +512,34 @@ footer {
     h2 { font-size: 1.6rem; }
   }
 
+
+  /* ── Grandes parties ── */
+  .section-part {
+    margin-bottom: 0;
+  }
+  .part-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    font-weight: 600;
+    padding: 2.5rem var(--pad) 0;
+    opacity: 0.9;
+    border-top: 1px solid rgba(77,219,138,0.12);
+    margin-top: 1rem;
+  }
+  .section-part:first-child .part-eyebrow {
+    border-top: none;
+    margin-top: 0;
+  }
+  /* Retirer l'eyebrow des sous-sections */
+  .section {
+    padding: 2rem var(--pad) 0;
+  }
+  .section h2 {
+    margin-top: 0.5rem;
+  }
 </style>
 </head>
 <body>
@@ -527,207 +555,237 @@ footer {
       <a class="btn btn-ghost" href="https://mylink.la/tjikkogame" target="_blank">Contact</a>
     </div>
   </div>
-  <div class="hero-right">
-    <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Essence of the Tjikko">
-  </div>
-</div>
 
 <div class="wrap">
 
-  <div class="section">
-    <div class="section-eyebrow">En bref</div>
-    <h2>Fiche technique</h2>
-    <div class="factsheet">
-      <div class="fact"><div class="fact-label">Développeur</div><div class="fact-value">Maxime Carcaillon<br><span style="font-size:0.8rem;opacity:0.6">La Revria Studio</span></div></div>
-      <div class="fact"><div class="fact-label">Plateforme</div><div class="fact-value">Windows (Steam)</div></div>
-      <div class="fact"><div class="fact-label">Genre</div><div class="fact-value">Aventure-Puzzle</div></div>
-      <div class="fact"><div class="fact-label">Durée de jeu</div><div class="fact-value">~2 heures</div></div>
-      <div class="fact"><div class="fact-label">Sortie</div><div class="fact-value">2 fév. 2022 (original)<br>22 fév. 2026 (remaster)</div></div>
-      <div class="fact"><div class="fact-label">Prix</div><div class="fact-value">5€ (démo gratuite)</div></div>
-      <div class="fact"><div class="fact-label">Langues</div><div class="fact-value">FR, EN, DE, ES, IT, PL, RU, ZH, KO, JA</div></div>
-      <div class="fact"><div class="fact-label">Moteur</div><div class="fact-value">Unreal Engine 5</div></div>
-    </div>
-  </div>
+  <!-- ══════════════════════════════════════════
+       PARTIE 1 : À PROPOS DU JEU
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">À propos du jeu</div>
 
-  <div class="section">
-    <div class="section-eyebrow">À propos du jeu</div>
-    <h2>Description</h2>
-    <div class="desc-grid">
-      <div class="desc-text">
-        <p>Essence of the Tjikko est un jeu d'aventure-puzzle rétro 3D se déroulant dans un laboratoire botanique souterrain de 7 étages - un donjon vertical de plus de 30 salles interconnectées, où des actions simples se combinent pour offrir des solutions surprenantes.</p>
-        <p>Le gameplay repose sur des mécaniques de base : escalader des rebords, pousser des caisses, transporter des bulbes d'énergie, nager. Mais elles se combinent avec 4 fruits saisonniers qui modifient tes capacités et ton apparence - ouvrant la voie à une résolution d'énigmes émergente qui récompense la curiosité (ou la force brute) :</p>
-        <div class="seasons"><div class="season season-spring"><div class="season-bar"></div><div class="season-name">Printemps</div><div class="season-ability">Rebond aquatique</div></div><div class="season season-summer"><div class="season-bar"></div><div class="season-name">Été</div><div class="season-ability">Vitesse fulgurante</div></div><div class="season season-autumn"><div class="season-bar"></div><div class="season-name">Automne</div><div class="season-ability">Vision éthérée</div></div><div class="season season-winter"><div class="season-bar"></div><div class="season-name">Hiver</div><div class="season-ability">Saut givré</div></div>
+    <div class="section">
+      <h2>Fiche technique</h2>
+      <div class="factsheet">
+        <div class="fact"><div class="fact-label">Développeur</div><div class="fact-value">Maxime Carcaillon<br><span style="font-size:0.8rem;opacity:0.6">La Revria Studio</span></div></div>
+        <div class="fact"><div class="fact-label">Plateforme</div><div class="fact-value">Windows (Steam)</div></div>
+        <div class="fact"><div class="fact-label">Genre</div><div class="fact-value">Aventure-Puzzle</div></div>
+        <div class="fact"><div class="fact-label">Durée de jeu</div><div class="fact-value">~2 heures</div></div>
+        <div class="fact"><div class="fact-label">Sortie</div><div class="fact-value">2 fév. 2022 (original)<br>22 fév. 2026 (remaster)</div></div>
+        <div class="fact"><div class="fact-label">Prix</div><div class="fact-value">5€ (démo gratuite)</div></div>
+        <div class="fact"><div class="fact-label">Langues</div><div class="fact-value">FR · EN · DE · ES · IT · PL · RU · ZH · KO · JA</div></div>
+        <div class="fact"><div class="fact-label">Moteur</div><div class="fact-value">Unreal Engine 5</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Description</h2>
+      <div class="desc-grid">
+        <div class="desc-text">
+          <p>Essence of the Tjikko est un jeu d'aventure-puzzle rétro 3D se déroulant dans un laboratoire botanique souterrain de 7 étages - un donjon vertical de plus de 30 salles interconnectées, où des actions simples se combinent pour offrir des solutions surprenantes.</p>
+          <p>Le gameplay repose sur des mécaniques de base : escalader des rebords, pousser des caisses, transporter des bulbes d'énergie, nager. Mais elles se combinent avec 4 fruits saisonniers qui modifient tes capacités et ton apparence - ouvrant la voie à une résolution d'énigmes émergente qui récompense la curiosité (ou la force brute) :</p>
+          <div class="seasons"><div class="season season-spring"><div class="season-bar"></div><div class="season-name">Printemps</div><div class="season-ability">Rebond aquatique</div></div><div class="season season-summer"><div class="season-bar"></div><div class="season-name">Été</div><div class="season-ability">Vitesse fulgurante</div></div><div class="season season-autumn"><div class="season-bar"></div><div class="season-name">Automne</div><div class="season-ability">Vision éthérée</div></div><div class="season season-winter"><div class="season-bar"></div><div class="season-name">Hiver</div><div class="season-ability">Saut givré</div></div>
+          </div>
+          <p>Le monde végétal fonctionne ici comme un système d'exploitation - les racines sont des câbles, la sève est de la donnée, les mécanismes botaniques répondent comme des ordinateurs vivants. La nature et la technologie parlent le même langage, et l'enfant-fougère est bilingue.</p>
+          <p>Visuellement, ce jeu reprend l'esprit de la 3D des années 2000 avec des techniques modernes et un parti pris graphique assumé. Le format 4:3 est un choix délibéré : ses proportions s'éloignent de la simulation en 16:9 pour évoquer davantage le conte de fées. Le monde s'inscrit dans le cadre comme une illustration de livre d'enfant.</p>
+          <p style="font-style:italic;opacity:0.7;font-family:'IM Fell English',serif">Inspiré des donjons de la licence Zelda, mais racontant sa propre histoire - une allégorie de l'enfance, de la croissance, et de l'instinct qui pousse vers la lumière.</p>
         </div>
-        <p>Le monde végétal fonctionne ici comme un système d'exploitation - les racines sont des câbles, la sève est de la donnée, les mécanismes botaniques répondent comme des ordinateurs vivants. La nature et la technologie parlent le même langage, et le héros, mi-plante mi-enfant, est bilingue.</p>
-        <p>Visuellement, ce jeu reprend l'esprit de la 3D des années 2000 avec des techniques modernes et un parti pris graphique assumé. Le format 4:3 est un choix délibéré : ses proportions s'éloignent de la simulation en 16:9 pour évoquer davantage le conte de fées. Le monde s'inscrit dans le cadre comme une illustration de livre d'enfant.</p>
-        <p style="font-style:italic;opacity:0.7;font-family:'IM Fell English',serif">Inspiré des donjons de la licence Zelda, mais racontant sa propre histoire - une allégorie de l'enfance, de la croissance, et de l'instinct qui pousse vers la lumière.</p>
-      </div>
-      <div>
-        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Vertical.png" alt="Key Art" style="width:100%;display:block;margin-bottom:1.5rem">
-        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay04.png" alt="Gameplay" style="width:100%;display:block">
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="remaster">
-      <div class="remaster-year">2026</div>
-      <div>
-        <div class="remaster-label">✦ Édition Remasterisée</div>
-        <p>Entièrement reconstruit dans Unreal Engine 5 après 4 ans de développement. Éclairages, textures et post-processing optimisés, nouveau système d'interface, système de fruits saisonniers étendu avec de nouveaux effets visuels, difficulté et collectibles rééquilibrés, plus de 50 corrections. Sorti le 22 février - le lendemain du 40e anniversaire de la licence Zelda.</p>
-      </div>
-    </div>
-
-    <h3>Caractéristiques</h3>
-    <div class="features">
-      <span class="feature">Transformations par fruits saisonniers</span>
-      <span class="feature">Résolution d'énigmes émergente</span>
-      <span class="feature">Donjon vertical de 7 étages</span>
-      <span class="feature">Esthétique rétro 4:3</span>
-      <span class="feature">30+ salles uniques</span>
-      <span class="feature">5€ (démo gratuite)</span>
-      <span class="feature">Support manette complet</span>
-      <span class="feature">10 langues</span>
-      <span class="feature">~2 heures</span>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-eyebrow">Trailer</div>
-    <h2>Bande-annonce - Édition Remasterisée</h2>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/zlH6HH8KiqU"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-eyebrow">Médias</div>
-    <h2>Captures d'écran</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:6px">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay01.png" alt="Gameplay 01" style="width:100%;display:block;filter:saturate(0.9)">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay02.png" alt="Gameplay 02" style="width:100%;display:block;filter:saturate(0.9)">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay03.png" alt="Gameplay 03" style="width:100%;display:block;filter:saturate(0.9)">
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:3rem">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render01.png" alt="Render 01" style="width:100%;display:block;filter:saturate(0.9)">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render02.png" alt="Render 02" style="width:100%;display:block;filter:saturate(0.9)">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render03.png" alt="Render 03" style="width:100%;display:block;filter:saturate(0.9)">
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-eyebrow">Histoire du développement</div>
-    <h2>Histoire</h2>
-    <div class="history-text">
-      <div>
-        <p>Essence of the Tjikko est né à Annecy - une ville splendide où la nature joue dans un grand théâtre. Son eau cristalline pour scène, les montagnes pour toile de fond, où chaque saison évolue comme un acte différent. En poste chez Ubisoft en 2018, j'ai commencé à écrire le monde d'Erdeven pendant mon temps libre, cherchant à relier la topographie d'Annecy à des archétypes de biomes et au symbolisme environnemental - une réflexion que je menais depuis ma lecture de <em>Psychanalyse des contes de fées</em> pendant mes études de géologie.</p>
-        <p>Alors que l'avenir semblait incertain en 2021, j'ai voulu commencer à créer quelque chose qui a du sens pour moi en tant qu'artiste. Je me suis lancé en freelance et me suis donné 9 mois pour sortir la première version de Tjikko. Elle est sortie en février 2022 - présentée dans de petits salons, introduite auprès de streamers... J'étais fier du résultat mais je le savais incomplet, alors je l'ai mis de côté, un peu comme un jeu trop dur sur lequel on revient plus aguerri.</p>
-      </div>
-      <div>
-        <p>Les années qui ont suivi ont été formatrices dans l'industrie, c'est le moins qu'on puisse dire. Et quand les planètes se sont enfin alignées en septembre 2025, je suis revenu à Tjikko avec un objectif clair : l'Édition Remasterisée pour le 40e anniversaire de la licence Zelda, le 21 février 2026.</p>
-        <p>Le remaster reflète tout ce que ces années m'ont appris. Au moins la moitié du jeu a été refaite - techniquement et artistiquement. L'éclairage, les textures, les détails du level design, l'équilibre de la difficulté...</p>
-        <p>En y repensant, Tjikko et moi avons évolué ensemble au fil de ce parcours, grâce au soutien des amis rencontrés en chemin. D'anciens collègues ont prêté leur regard et leur instinct au design et aux visuels. Des locuteurs natifs en 10 langues ont fait confiance à cette histoire pour la porter dans leur propre langue. Et la musique de mon ami Philippe Reinhart a donné au monde son battement de cœur.</p>
-        <p style="font-style:italic;opacity:0.65;font-family:'IM Fell English',serif">Créer un jeu prend du temps, mais voir grandir est une récompense en soi. Et j'ai hâte de voir le prochain acte.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-eyebrow">La suite</div>
-    <h2>Prochaines étapes</h2>
-    <p><em>Essence of the Tjikko - Prologue</em> est le premier chapitre d'une aventure plus vaste. Le jeu complet imagine un monde souterrain immense : cinq donjons, un hub central creusé sous les racines du grand Tjikko, avec des lacs souterrains, des temples, des jungles et des villages - une civilisation figée dans le temps. Le prochain chapitre est en cours de développement.</p>
-  </div>
-
-  <div class="section">
-    <div class="section-eyebrow">Le développeur</div>
-    <h2>La Revria Studio</h2>
-    <div class="about-grid">
-      <div class="about-card">
-        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Picture.png" alt="Maxime Carcaillon" style="width:160px;height:160px;object-fit:cover;object-position:60% 30%;border-radius:4px;margin-bottom:1rem;filter:saturate(0.85)">
-        <div class="about-name">Maxime Carcaillon</div>
-        <div class="about-role">Solo Développeur · Paris, France</div>
-        <div class="about-links"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1bcffb2b0a3b2b0b8bdbdbebf91b6bcb0b8bdffb2bebc">[email&#160;protected]</a><a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a><a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
+        <div>
+          <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Vertical.png" alt="Key Art" style="width:100%;display:block;margin-bottom:1.5rem">
+          <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay04.png" alt="Gameplay" style="width:100%;display:block">
         </div>
       </div>
-      <div>
-        <p>Titulaire d'une licence de géologie reconverti dans le game art, Maxime apporte un regard singulier à la création de mondes - façonné par la topologie, les systèmes naturels et le symbolisme des paysages. Après avoir contribué à des titres comme <em>Tom Clancy's The Division 2</em> et <em>AGOS</em> chez Ubisoft, il a fondé La Revria Studio pour débuter Essence Of The Tjikko.</p>
-        <p>La Revria Studio est une structure solo entourée d'un réseau de collaborateurs - compositeur, traducteurs, playtesters - qui croient au projet. Des amis et anciens collègues qui ont prêté leur regard, leur voix et leur temps pour que cette histoire existe.</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="section">
-    <div class="section-eyebrow">Identité visuelle</div>
-    <h2>Identité visuelle</h2>
-    <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem">
-      <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Logo" style="width:280px;filter:drop-shadow(0 0 30px rgba(77,219,138,0.3))">
-      <div>
-        <h3 style="margin-top:0">Palette de couleurs</h3>
-        <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#109d62"></div><div class="swatch-hex">#109d62</div></div><div class="swatch"><div class="swatch-color" style="background:#4DDB8A"></div><div class="swatch-hex">#4DDB8A</div></div><div class="swatch"><div class="swatch-color" style="background:#7EECD4"></div><div class="swatch-hex">#7EECD4</div></div><div class="swatch"><div class="swatch-color" style="background:#0d1b2e"></div><div class="swatch-hex">#0d1b2e</div></div><div class="swatch"><div class="swatch-color" style="background:#05090f"></div><div class="swatch-hex">#05090f</div></div>
+      <div class="divider"></div>
+
+      <div class="remaster">
+        <div class="remaster-year">2026</div>
+        <div>
+          <div class="remaster-label">✦ Édition Remasterisée</div>
+          <p>Entièrement reconstruit dans Unreal Engine 5 après 4 ans de développement. Éclairages, textures et post-processing optimisés, nouveau système d'interface, système de fruits saisonniers étendu avec de nouveaux effets visuels, difficulté et collectibles rééquilibrés, plus de 50 corrections. Sorti le 22 février - le lendemain du 40e anniversaire de la licence Zelda.</p>
         </div>
-        <h3>Couleurs saisonnières</h3>
-        <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#4a5fa8"></div><div class="swatch-hex">Spring</div></div><div class="swatch"><div class="swatch-color" style="background:#c0392b"></div><div class="swatch-hex">Summer</div></div><div class="swatch"><div class="swatch-color" style="background:#c9922a"></div><div class="swatch-hex">Autumn</div></div><div class="swatch"><div class="swatch-color" style="background:#a8ddd4"></div><div class="swatch-hex">Winter</div></div>
+      </div>
+
+      <h3>Caractéristiques</h3>
+      <div class="features">
+        <span class="feature">Transformations par fruits saisonniers</span>
+        <span class="feature">Résolution d'énigmes émergente</span>
+        <span class="feature">Donjon vertical de 7 étages</span>
+        <span class="feature">Esthétique rétro 4:3</span>
+        <span class="feature">30+ salles uniques</span>
+        <span class="feature">5€ (démo gratuite)</span>
+        <span class="feature">Support manette complet</span>
+        <span class="feature">10 langues</span>
+        <span class="feature">~2 heures</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PARTIE 2 : MÉDIAS
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">Médias</div>
+
+    <div class="section">
+      <h2>Bande-annonce — Édition Remasterisée</h2>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/zlH6HH8KiqU"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Captures d'écran</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:6px">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay01.png" alt="Gameplay 01" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay02.png" alt="Gameplay 02" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay03.png" alt="Gameplay 03" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:3rem">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render01.png" alt="Render 01" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render02.png" alt="Render 02" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Render03.png" alt="Render 03" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PARTIE 3 : HISTOIRE DU DÉVELOPPEMENT
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">Histoire du développement</div>
+
+    <div class="section">
+      <h2>Les origines</h2>
+      <div class="history-text">
+        <div>
+          <p>Essence of the Tjikko est né à Annecy - une ville splendide où la nature joue dans un grand théâtre. Son eau cristalline pour scène, les montagnes pour toile de fond, où chaque saison évolue comme un acte différent. En poste chez Ubisoft en 2018, j'ai commencé à écrire le monde d'Erdeven pendant mon temps libre, cherchant à relier la topographie d'Annecy à des archétypes de biomes et au symbolisme environnemental - une réflexion que je menais depuis ma lecture de <em>Psychanalyse des contes de fées</em> pendant mes études de géologie.</p>
+          <p>Alors que l'avenir semblait incertain en 2021, j'ai voulu commencer à créer quelque chose qui a du sens pour moi en tant qu'artiste. Je me suis lancé en freelance et me suis donné 9 mois pour sortir la première version de Tjikko. Elle est sortie en février 2022 - présentée dans de petits salons, introduite auprès de streamers... J'étais fier du résultat mais je le savais incomplet, alors je l'ai mis de côté, un peu comme un jeu trop dur sur lequel on revient plus aguerri.</p>
         </div>
+      </div>
+    </div>
 
-    <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=drive_link" target="_blank" style="display:inline-block;margin-top:1.5rem;padding:0.7rem 1.4rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-size:0.85rem;letter-spacing:0.1em;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='rgba(77,219,138,0.08)'" onmouseout="this.style.background='none'">⬇ Télécharger les assets (logos, captures, artworks)</a>
+    <div class="section">
+      <h2>La suite</h2>
+      <div class="history-text">
+        <div>
+          <p>Les années qui ont suivi ont été formatrices dans l'industrie, c'est le moins qu'on puisse dire. Et quand les planètes se sont enfin alignées en septembre 2025, je suis revenu à Tjikko avec un objectif clair : l'Édition Remasterisée pour le 40e anniversaire de la licence Zelda, le 21 février 2026.</p>
+          <p>Le remaster reflète tout ce que ces années m'ont appris. Au moins la moitié du jeu a été refaite - techniquement et artistiquement. L'éclairage, les textures, les détails du level design, l'équilibre de la difficulté...</p>
+          <p>En y repensant, Tjikko et moi avons évolué ensemble au fil de ce parcours, grâce au soutien des amis rencontrés en chemin. D'anciens collègues ont prêté leur regard et leur instinct au design et aux visuels. Des locuteurs natifs en 10 langues ont fait confiance à cette histoire pour la porter dans leur propre langue. Et la musique de mon ami Philippe Reinhart a donné au monde son battement de cœur.</p>
+          <p style="font-style:italic;opacity:0.65;font-family:'IM Fell English',serif">Créer un jeu prend du temps, mais voir grandir est une récompense en soi. Et j'ai hâte de voir le prochain acte.</p>
+          <p><em>Essence of the Tjikko - Prologue</em> est le premier chapitre d'une aventure plus vaste. Le jeu complet imagine un monde souterrain immense : cinq donjons, un hub central creusé sous les racines du grand Tjikko, avec des lacs souterrains, des temples, des jungles et des villages - une civilisation figée dans le temps. Le prochain chapitre est en cours de développement.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-eyebrow">Credits</div>
-    <h2>Ceux qui ont fait le jeu</h2>
-    <div class="credits-section">
-      <div class="credits-title">Développement</div>
-      <div class="credits-names">Maxime Carcaillon - Game Design, Art, Programmation</div>
-    </div>
-    <div class="credits-section">
-      <div class="credits-title">Musique</div>
-      <div class="credits-names">Philippe Reinhart</div>
-    </div>
-    <div class="credits-section">
-      <div class="credits-title">Traducteurs</div>
-      <div class="translators-grid">
-        <div><span class="translator-lang">简体中文</span><span class="credits-names">Christina Dong</span></div>
-        <div><span class="translator-lang">Deutsch</span><span class="credits-names">Camille Andrelan, Tim Taesler</span></div>
-        <div><span class="translator-lang">Español</span><span class="credits-names">Solène Tremblay</span></div>
-        <div><span class="translator-lang">Italiano</span><span class="credits-names">Giulia Fagioli</span></div>
-        <div><span class="translator-lang">한국어</span><span class="credits-names">Fukugaki Momoka</span></div>
-        <div><span class="translator-lang">日本語</span><span class="credits-names">Alexis Lapajon, Yuri Fujimura</span></div>
-        <div><span class="translator-lang">Polski</span><span class="credits-names">Tiffany Kendziolka</span></div>
-        <div><span class="translator-lang">Русский</span><span class="credits-names">Cristina Fesiuc</span></div>
+  <!-- ══════════════════════════════════════════
+       PARTIE 4 : LE DÉVELOPPEUR
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">Le développeur</div>
+
+    <div class="section">
+      <h2>La Revria Studio</h2>
+      <div class="about-grid">
+        <div class="about-card" style="display:grid;grid-template-columns:1fr 160px;gap:1.5rem;align-items:start">
+          <div>
+            <div class="about-name">Maxime Carcaillon</div>
+            <div class="about-role">Solo Développeur · Paris, France</div>
+            <div class="about-links">
+              <a href="https://mylink.la/tjikkogame" target="_blank">mylink.la/tjikkogame</a>
+              <a href="https://www.artstation.com/xamix" target="_blank">artstation.com/xamix</a>
+            </div>
+          </div>
+          <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Picture.png" alt="Maxime Carcaillon" style="width:160px;height:160px;object-fit:cover;object-position:60% 30%;border-radius:4px;filter:saturate(0.85)">
+        </div>
+        <div>
+          <p>Titulaire d'une licence de géologie reconverti dans le game art, Maxime apporte un regard singulier à la création de mondes - façonné par la topologie, les systèmes naturels et le symbolisme des paysages. Après avoir contribué à des titres comme <em>Tom Clancy's The Division 2</em> et <em>AGOS</em> chez Ubisoft, il a fondé La Revria Studio pour débuter Essence Of The Tjikko.</p>
+          <p>La Revria Studio est une structure solo entourée d'un réseau de collaborateurs - compositeur, traducteurs, playtesters - qui croient au projet. Des amis et anciens collègues qui ont prêté leur regard, leur voix et leur temps pour que cette histoire existe.</p>
+        </div>
       </div>
     </div>
-    <div class="credits-section">
-      <div class="credits-title">Playtesters</div>
-      <div class="credits-names">Alice Andrieu, Benjamin Couvin, Antonio Cordeiro, Benoit Croenne, Suzanne Dang, Theo Dorp, Matthias Dubray, Mhamed Elmezoued, Mathieu Hurel, Victor Jarnoux, Pierrick Jenny, Boris Kolimaga, Jonathan Lorber, Ulysse Mauffret, Alexia Moleon, Mélanie Pango, Margot Pelloquet, Leny Puicouypoul, Arnaud Roy, Kevin Soulage, Tiphanie Timores, Jules Tinaz, Maël Villa, Charlie Wagner</div>
+
+    <div class="section">
+      <h2>Ceux qui ont fait le jeu</h2>
+      <div class="credits-section">
+        <div class="credits-title">Développement</div>
+        <div class="credits-names">Maxime Carcaillon - Game Design, Art, Programmation</div>
+      </div>
+      <div class="credits-section">
+        <div class="credits-title">Musique</div>
+        <div class="credits-names">Philippe Reinhart</div>
+      </div>
+      <div class="credits-section">
+        <div class="credits-title">Traducteurs</div>
+        <div class="translators-grid">
+          <div><span class="translator-lang">简体中文</span><span class="credits-names">Christina Dong</span></div>
+          <div><span class="translator-lang">Deutsch</span><span class="credits-names">Camille Andrelan, Tim Taesler</span></div>
+          <div><span class="translator-lang">Español</span><span class="credits-names">Solène Tremblay</span></div>
+          <div><span class="translator-lang">Italiano</span><span class="credits-names">Giulia Fagioli</span></div>
+          <div><span class="translator-lang">한국어</span><span class="credits-names">Fukugaki Momoka</span></div>
+          <div><span class="translator-lang">日本語</span><span class="credits-names">Alexis Lapajon, Yuri Fujimura</span></div>
+          <div><span class="translator-lang">Polski</span><span class="credits-names">Tiffany Kendziolka</span></div>
+          <div><span class="translator-lang">Русский</span><span class="credits-names">Cristina Fesiuc</span></div>
+        </div>
+      </div>
+      <div class="credits-section">
+        <div class="credits-title">Playtesters</div>
+        <div class="credits-names">Alice Andrieu, Benjamin Couvin, Antonio Cordeiro, Benoit Croenne, Suzanne Dang, Theo Dorp, Matthias Dubray, Mhamed Elmezoued, Mathieu Hurel, Victor Jarnoux, Pierrick Jenny, Boris Kolimaga, Jonathan Lorber, Ulysse Mauffret, Alexia Moleon, Mélanie Pango, Margot Pelloquet, Leny Puicouypoul, Arnaud Roy, Kevin Soulage, Tiphanie Timores, Jules Tinaz, Maël Villa, Charlie Wagner</div>
+      </div>
+      <div class="credits-section">
+        <div class="credits-title">Remerciements</div>
+        <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy, "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
+        <div class="credits-note">À l'équipe New3dge - Mika, Diana, Mickael, Guillaume, Anthony…</div>
+        <div class="credits-note">Et à ma sœur, mon père et ma mère - je vous aime tellement !</div>
+      </div>
     </div>
-    <div class="credits-section">
-      <div class="credits-title">Remerciements</div>
-      <div class="credits-names">Kevin Bertelli, Pierre-Gabriel Chouzy, "Saucisson", Emilie Cordeiro, Nabil Damer, Romain Dauger, Audrey Frazza, Adrien Louineau, Rafaël Massiani, Rosalie Montagu, Stéphane Montel, Sébastien Nicolaïdis, Justine Pitilet, Justine Ramade, Alice Ruquier, Samy Seffadj, Omar Souissi</div>
-      <div class="credits-note">À l'équipe New3dge - Mika, Diana, Mickael, Guillaume, Anthony…</div>
-      <div class="credits-note">Et à ma sœur, mon père et ma mère - je vous aime tellement !</div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <div class="contact-strip">
+        <div><div class="contact-block-label">Développeur</div><div class="contact-block-val">Maxime Carcaillon</div></div>
+        <div><div class="contact-block-label">Email</div><div class="contact-block-val">m.carcaillon@gmail.com</div></div>
+        <div><div class="contact-block-label">Steam</div><div class="contact-block-val"><a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank">Page Steam</a></div></div>
+        <div><div class="contact-block-label">Bluesky</div><div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div></div>
+        <div><div class="contact-block-label">Twitter / X</div><div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div></div>
+        <div><div class="contact-block-label">Instagram</div><div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div></div>
+      </div>
     </div>
   </div>
 
+  <!-- ══════════════════════════════════════════
+       PARTIE 5 : PRESSE, STREAMERS & CRÉATEURS
+  ══════════════════════════════════════════ -->
+  <div class="section-part">
+    <div class="part-eyebrow">Presse, Streamers &amp; Créateurs</div>
 
-  <div class="section">
-    <div class="section-eyebrow">Contact</div>
-    <h2>Contact</h2>
-    <div class="contact-strip">
-      <div><div class="contact-block-label">Développeur</div><div class="contact-block-val">Maxime Carcaillon</div></div>
-      <div><div class="contact-block-label">Email</div><div class="contact-block-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee3a0edeffcedefe7e2e2e1e0cee9e3efe7e2a0ede1e3">[email&#160;protected]</a></div></div>
-      <div><div class="contact-block-label">Steam</div><div class="contact-block-val"><a href="https://store.steampowered.com/app/1783740/Essence_Of_The_Tjikko__Prologue/" target="_blank">Page Steam</a></div></div>
-      <div><div class="contact-block-label">Bluesky</div><div class="contact-block-val"><a href="https://bsky.app/profile/tjikko-dev.bsky.social" target="_blank">@tjikko-dev</a></div></div>
-      <div><div class="contact-block-label">Twitter / X</div><div class="contact-block-val"><a href="https://x.com/TjikkoGame" target="_blank">@TjikkoGame</a></div></div>
-      <div><div class="contact-block-label">Instagram</div><div class="contact-block-val"><a href="https://www.instagram.com/tjikko.dev" target="_blank">@tjikko.dev</a></div></div>
-    </div>
-    <div style="margin-top:2rem;padding:1.2rem 1.5rem;border:1px solid rgba(77,219,138,0.3);border-radius:4px;background:rgba(77,219,138,0.04)">
-      <div style="font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cyan);font-weight:600;margin-bottom:0.8rem">PRESSE, STREAMERS & CRÉATEURS</div>
-      <p style="margin:0 0 1rem;font-size:1rem">Une clé Steam est disponible sur demande. Contact via email ou <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a>.</p>
-      <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=drive_link" target="_blank" style="display:inline-block;padding:0.6rem 1.2rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ TÉLÉCHARGER LES ASSETS</a>
+    <div class="section">
+      <h2>Clés &amp; ressources</h2>
+      <p style="margin-bottom:1.5rem">Une clé Steam est disponible sur demande pour la presse et les créateurs de contenu. Contactez via email ou <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a>.</p>
+
+      <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.7rem 1.4rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase;margin-bottom:2.5rem">⬇ TÉLÉCHARGER LES ASSETS</a>
+
+      <h3 style="margin-top:0">Ils y ont joué</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:2.5rem">
+        <a href="https://www.twitch.tv/nastr0" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">nastr0</span></a>
+        <a href="https://www.twitch.tv/seishaya" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">seishaya</span></a>
+        <a href="https://www.twitch.tv/littlelaggy" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Little Laggy</span></a>
+        <a href="https://www.twitch.tv/chochklah" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Chochklah</span></a>
+      </div>
+
+      <h3>Identité visuelle</h3>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem">
+        <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Logo" style="width:280px;filter:drop-shadow(0 0 30px rgba(77,219,138,0.3))">
+        <div>
+          <h3 style="margin-top:0">Palette de couleurs</h3>
+          <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#109d62"></div><div class="swatch-hex">#109d62</div></div><div class="swatch"><div class="swatch-color" style="background:#4DDB8A"></div><div class="swatch-hex">#4DDB8A</div></div><div class="swatch"><div class="swatch-color" style="background:#7EECD4"></div><div class="swatch-hex">#7EECD4</div></div><div class="swatch"><div class="swatch-color" style="background:#0d1b2e"></div><div class="swatch-hex">#0d1b2e</div></div><div class="swatch"><div class="swatch-color" style="background:#05090f"></div><div class="swatch-hex">#05090f</div></div></div>
+          <h3>Couleurs saisonnières</h3>
+          <div class="color-swatches"><div class="swatch"><div class="swatch-color" style="background:#4a5fa8"></div><div class="swatch-hex">Printemps</div></div><div class="swatch"><div class="swatch-color" style="background:#c0392b"></div><div class="swatch-hex">Été</div></div><div class="swatch"><div class="swatch-color" style="background:#c9922a"></div><div class="swatch-hex">Automne</div></div><div class="swatch"><div class="swatch-color" style="background:#a8ddd4"></div><div class="swatch-hex">Hiver</div></div></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -741,26 +799,22 @@ footer {
   <span class="lb-close" onclick="closeLightbox()">✕</span>
   <img id="lb-img" src="" alt="">
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
-  function openLightbox(src) {
-    document.getElementById('lb-img').src = src;
-    document.getElementById('lightbox').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('img[src*="Gameplay"], img[src*="Render"], img[src*="Vertical"], img[src*="Background"]').forEach(function(img) {
-      img.addEventListener('click', function() { openLightbox(this.src); });
-    });
-  });
+  function openLightbox(src) { document.getElementById('lb-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 <div style="position:fixed;bottom:0;left:0;right:0;background:rgba(5,9,15,0.95);border-top:1px solid rgba(77,219,138,0.15);padding:0.6rem 1.5rem;display:flex;align-items:center;gap:1rem;z-index:9998;backdrop-filter:blur(8px);flex-wrap:wrap">
   <a href="index.html" style="font-family:'Cinzel',serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--cyan);text-decoration:none;opacity:0.7;flex-shrink:0">← Toutes les langues</a>
   <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
-    <a href="presskit_en.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif;transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.5)';this.style.color='#7EECD4'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text-dim)'">EN</a>    <a href="presskit_fr.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.5);font-size:0.65rem;color:var(--cyan);text-decoration:none;font-family:'Cinzel',serif">FR</a>    <a href="presskit_ja.html" style="padding:0.25rem 0.6rem;border:1px
+    <a href="presskit_fr.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.5);font-size:0.65rem;color:var(--cyan);text-decoration:none;font-family:'Cinzel',serif">FR</a>
+    <a href="presskit_en.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">EN</a>
+    <a href="presskit_de.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">DE</a>
+    <a href="presskit_es.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">ES</a>
+    <a href="presskit_ja.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">JA</a>
+  </div>
+</div>
+</body>
+</html>
