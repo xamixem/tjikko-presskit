@@ -89,12 +89,12 @@ body::after {
 }
 
 .press-kit-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.4em;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--green);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -423,7 +423,7 @@ footer {
     box-shadow: 0 0 60px rgba(0,0,0,0.8);
   }
   .lb-close {
-    position: fixed;
+    position: absolute;
     top: 1.5rem;
     right: 1.5rem;
     color: rgba(255,255,255,0.5);
@@ -587,20 +587,6 @@ footer {
     <div class="part-eyebrow">À propos du jeu</div>
 
     <div class="section">
-      <h2>Fiche technique</h2>
-      <div class="factsheet">
-        <div class="fact"><div class="fact-label">Développeur</div><div class="fact-value">Maxime Carcaillon<br><span style="font-size:0.8rem;opacity:0.6">La Revria Studio</span></div></div>
-        <div class="fact"><div class="fact-label">Plateforme</div><div class="fact-value">Windows (Steam)</div></div>
-        <div class="fact"><div class="fact-label">Genre</div><div class="fact-value">Aventure-Puzzle</div></div>
-        <div class="fact"><div class="fact-label">Durée de jeu</div><div class="fact-value">~2 heures</div></div>
-        <div class="fact"><div class="fact-label">Sortie</div><div class="fact-value">2 fév. 2022 (original)<br>22 fév. 2026 (remaster)</div></div>
-        <div class="fact"><div class="fact-label">Prix</div><div class="fact-value">5€ (démo gratuite)</div></div>
-        <div class="fact"><div class="fact-label">Langues</div><div class="fact-value">FR · EN · DE · ES · IT · PL · RU · ZH · KO · JA</div></div>
-        <div class="fact"><div class="fact-label">Moteur</div><div class="fact-value">Unreal Engine 5</div></div>
-      </div>
-    </div>
-
-    <div class="section">
       <h2>Description</h2>
       <div class="desc-grid" style="grid-template-columns:1fr">
         <div class="desc-text">
@@ -622,6 +608,23 @@ footer {
           <div class="remaster-label">✦ Édition Remasterisée</div>
           <p>Entièrement reconstruit dans Unreal Engine 5 après 4 ans de développement. Éclairages, textures et post-processing optimisés, nouveau système d'interface, système de fruits saisonniers étendu avec de nouveaux effets visuels, difficulté et collectibles rééquilibrés, plus de 50 corrections. Sorti le 22 février - le lendemain du 40e anniversaire de la licence Zelda.</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fiche technique déplacée après Description -->
+  <div class="section-part" style="padding-top:0">
+    <div class="section">
+      <h2>Fiche technique</h2>
+      <div class="factsheet">
+        <div class="fact"><div class="fact-label">Développeur</div><div class="fact-value">Maxime Carcaillon<br><span style="font-size:0.8rem;opacity:0.6">La Revria Studio</span></div></div>
+        <div class="fact"><div class="fact-label">Plateforme</div><div class="fact-value">Windows (Steam)</div></div>
+        <div class="fact"><div class="fact-label">Genre</div><div class="fact-value">Aventure-Puzzle</div></div>
+        <div class="fact"><div class="fact-label">Durée de jeu</div><div class="fact-value">~2 heures</div></div>
+        <div class="fact"><div class="fact-label">Sortie</div><div class="fact-value">2 fév. 2022 (original)<br>22 fév. 2026 (remaster)</div></div>
+        <div class="fact"><div class="fact-label">Prix</div><div class="fact-value">5€ (démo gratuite)</div></div>
+        <div class="fact"><div class="fact-label">Langues</div><div class="fact-value">FR · EN · DE · ES · IT · PL · RU · ZH · KO · JA</div></div>
+        <div class="fact"><div class="fact-label">Moteur</div><div class="fact-value">Unreal Engine 5</div></div>
       </div>
     </div>
   </div>
@@ -653,7 +656,7 @@ footer {
         <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay03.png" alt="Gameplay 03" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
         <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Gameplay04.png" alt="Gameplay 04" style="width:100%;display:block;filter:saturate(0.9);cursor:pointer" onclick="openLightbox(this.src)">
       </div>
-    </div>
+<div style="margin:1.5rem 0 2rem"><a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.4rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ Google Drive Assets Kit</a></div>    </div>
   </div>
 
   <!-- ══════════════════════════════════════════
@@ -757,9 +760,6 @@ footer {
     <div class="part-eyebrow">Presse, Streamers &amp; Créateurs</div>
 
     <div class="section">
-      <h2>Clés Steam</h2>
-      <p style="margin-bottom:1.5rem">Une clé Steam est disponible sur demande pour la presse et les créateurs de contenu. Contactez via email ou <a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan)">mylink.la/tjikkogame</a>.</p>
-
       <h3 style="margin-top:0">Ils y ont joué</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:2.5rem">
         <a href="https://www.twitch.tv/nastr0" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(77,219,138,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(77,219,138,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(77,219,138,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">nastr0</span></a>
@@ -772,7 +772,7 @@ footer {
       <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem">
         <div style="display:flex;flex-direction:column;align-items:center;gap:1rem">
           <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LOGO_Relief.png" alt="Logo" style="width:280px;filter:drop-shadow(0 0 30px rgba(77,219,138,0.3))">
-          <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.55rem 1.1rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ ASSETS</a>
+          <a href="https://drive.google.com/drive/folders/1-dApEhyJnOnG_Mt2FwlM_-fwiIwZhCGu?usp=sharing" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.55rem 1.1rem;border:1px solid rgba(77,219,138,0.4);color:var(--cyan);font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.2em;text-decoration:none;text-transform:uppercase">⬇ Google Drive Assets Kit</a>
         </div>
         <div>
           <h3 style="margin-top:0">Palette de couleurs</h3>
@@ -823,7 +823,7 @@ footer {
   <span class="lb-close" onclick="closeLightbox()">✕</span>
   <img id="lb-img" src="" alt="">
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
   function openLightbox(src) { document.getElementById('lb-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
   function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
