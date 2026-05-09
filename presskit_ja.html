@@ -1,8 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xamixem.github.io/tjikko-presskit/presskit_ja.html">
+<meta property="og:title" content="Essence of the Tjikko — プレスキット">
+<meta property="og:description" content="地下7階の植物学研究所を舞台にしたレトロ3Dパズルアドベンチャー。Maxime Carcaillon — La Revria Studio のインディーゲーム。">
+<meta property="og:image" content="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/OpenGraph.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Essence of the Tjikko — プレスキット">
+<meta name="twitter:description" content="地下7階の植物学研究所を舞台にしたレトロ3Dパズルアドベンチャー。Maxime Carcaillon — La Revria Studio のインディーゲーム。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/OpenGraph.jpg">
 <title>Essence of the Tjikko — プレスキット</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Cinzel:wght@400;700&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -17,310 +29,312 @@
     --text-dim: #7a9a8a;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+- { margin: 0; padding: 0; box-sizing: border-box; }
   html { overflow-x: hidden; }
 
-  body {
-    background-color: var(--black);
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 300;
-    line-height: 2;
-    overflow-x: hidden;
-  }
+body {
+background-color: var(–black);
+color: var(–text);
+font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 300;
+line-height: 2;
+overflow-x: hidden;
+}
 
-  /* HERO */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem;
-    background: url('https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Banner%20copy.jpg') center/cover no-repeat;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(5,9,15,0.3) 0%, rgba(5,9,15,0.6) 60%, rgba(5,9,15,1) 100%),
-                radial-gradient(ellipse at 30% 70%, rgba(16,157,98,0.15) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .hero-badge {
-    font-family: 'Cinzel', serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-    color: var(--green);
-    text-transform: uppercase;
-    border: 1px solid rgba(16,157,98,0.3);
-    padding: 0.4em 1.2em;
-    margin-bottom: 2rem;
-    position: relative; z-index: 1;
-    animation: fadeIn 1s ease both;
-  }
-  .hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(0.9rem, 2vw, 1.3rem);
-    letter-spacing: 0.4em;
-    color: var(--green-bright);
-    margin-bottom: 2rem;
-    position: relative; z-index: 1;
-    animation: fadeIn 1s 0.4s ease both;
-  }
-  .hero-pitch {
-    max-width: 600px;
-    font-size: 1rem;
-    color: var(--text);
-    opacity: 0.85;
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 300;
-    line-height: 2.2;
-    position: relative; z-index: 1;
-    animation: fadeIn 1s 0.6s ease both;
-  }
-  .hero-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative; z-index: 1;
-    animation: fadeIn 1s 0.8s ease both;
-  }
-  .btn {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    padding: 0.7em 1.8em;
-    border: 1px solid var(--green);
-    color: var(--green-bright);
-    transition: all 0.3s;
-    text-transform: uppercase;
-  }
-  .btn:hover { background: var(--green); color: var(--black); }
-  .btn.primary { background: var(--green); color: var(--black); }
-  .btn.primary:hover { background: var(--green-bright); border-color: var(--green-bright); }
+/* HERO */
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 4rem 2rem;
+background: url(‘https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/Banner%20copy.jpg’) center/cover no-repeat;
+overflow: hidden;
+}
+.hero::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: linear-gradient(to bottom, rgba(5,9,15,0.3) 0%, rgba(5,9,15,0.6) 60%, rgba(5,9,15,1) 100%),
+radial-gradient(ellipse at 30% 70%, rgba(16,157,98,0.15) 0%, transparent 60%);
+pointer-events: none;
+}
+.hero-badge {
+font-family: ‘Cinzel’, serif;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+color: var(–green);
+text-transform: uppercase;
+border: 1px solid rgba(16,157,98,0.3);
+padding: 0.4em 1.2em;
+margin-bottom: 2rem;
+position: relative; z-index: 1;
+animation: fadeIn 1s ease both;
+}
+.hero-subtitle {
+font-family: ‘Cinzel’, serif;
+font-size: clamp(0.9rem, 2vw, 1.3rem);
+letter-spacing: 0.4em;
+color: var(–green-bright);
+margin-bottom: 2rem;
+position: relative; z-index: 1;
+animation: fadeIn 1s 0.4s ease both;
+}
+.hero-pitch {
+max-width: 600px;
+font-size: 1rem;
+color: var(–text);
+opacity: 0.85;
+font-family: ‘Noto Serif JP’, serif;
+font-weight: 300;
+line-height: 2.2;
+position: relative; z-index: 1;
+animation: fadeIn 1s 0.6s ease both;
+}
+.hero-links {
+display: flex;
+gap: 1rem;
+margin-top: 2.5rem;
+flex-wrap: wrap;
+justify-content: center;
+position: relative; z-index: 1;
+animation: fadeIn 1s 0.8s ease both;
+}
+.btn {
+font-family: ‘Cinzel’, serif;
+font-size: 0.75rem;
+letter-spacing: 0.2em;
+text-decoration: none;
+padding: 0.7em 1.8em;
+border: 1px solid var(–green);
+color: var(–green-bright);
+transition: all 0.3s;
+text-transform: uppercase;
+}
+.btn:hover { background: var(–green); color: var(–black); }
+.btn.primary { background: var(–green); color: var(–black); }
+.btn.primary:hover { background: var(–green-bright); border-color: var(–green-bright); }
 
-  /* PRESS KIT LABEL */
-  .press-kit-label {
-    font-family: 'Cinzel', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--green-bright);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    position: relative; z-index: 1;
-    text-shadow: 0 0 20px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8);
-    background: rgba(5,9,15,0.45);
-    padding: 0.4rem 1.2rem;
-    backdrop-filter: blur(4px);
-  }
-  .press-kit-label::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    background: var(--green);
-  }
+/* PRESS KIT LABEL */
+.press-kit-label {
+font-family: ‘Cinzel’, sans-serif;
+font-size: 1.3rem;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: var(–green-bright);
+margin-bottom: 2rem;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+position: relative; z-index: 1;
+text-shadow: 0 0 20px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,0.8);
+background: rgba(5,9,15,0.45);
+padding: 0.4rem 1.2rem;
+backdrop-filter: blur(4px);
+}
+.press-kit-label::before {
+content: ‘’;
+display: block;
+width: 30px;
+height: 1px;
+background: var(–green);
+}
 
-  /* LAYOUT */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  section {
-    padding: 5rem 0;
-    border-top: 1px solid rgba(16,157,98,0.1);
-  }
-  .section-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-    color: var(--green-bright);
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
-    opacity: 0.9;
-  }
-  h2 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    color: var(--white);
-    font-weight: 400;
-    margin-bottom: 2rem;
-    text-shadow: 0 0 20px rgba(77,219,138,0.2);
-  }
-  h3 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1rem;
-    color: var(--green-bright);
-    font-weight: 400;
-    margin: 2rem 0 0.8rem;
-    letter-spacing: 0.05em;
-  }
-  p { margin-bottom: 1.2rem; font-size: 0.95rem; opacity: 0.85; font-family: 'Noto Sans JP', sans-serif; }
+/* LAYOUT */
+.container {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+section {
+padding: 5rem 0;
+border-top: 1px solid rgba(16,157,98,0.1);
+}
+.section-label {
+font-family: ‘Cinzel’, serif;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+color: var(–green-bright);
+text-transform: uppercase;
+margin-bottom: 0.8rem;
+opacity: 0.9;
+}
+h2 {
+font-family: ‘Cinzel’, serif;
+font-size: clamp(1.4rem, 3vw, 2rem);
+color: var(–white);
+font-weight: 400;
+margin-bottom: 2rem;
+text-shadow: 0 0 20px rgba(77,219,138,0.2);
+}
+h3 {
+font-family: ‘Noto Serif JP’, serif;
+font-size: 1rem;
+color: var(–green-bright);
+font-weight: 400;
+margin: 2rem 0 0.8rem;
+letter-spacing: 0.05em;
+}
+p { margin-bottom: 1.2rem; font-size: 0.95rem; opacity: 0.85; font-family: ‘Noto Sans JP’, sans-serif; }
 
-  /* FACTSHEET */
-  .factsheet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-    border: 1px solid rgba(16,157,98,0.15);
-  }
-  .fact-item {
-    padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid rgba(16,157,98,0.1);
-    border-right: 1px solid rgba(16,157,98,0.1);
-  }
-  .fact-label {
-    font-family: 'Cinzel', serif;
-    font-size: 0.58rem;
-    letter-spacing: 0.2em;
-    color: var(--green);
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-  }
-  .fact-value { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; color: var(--white); }
+/* FACTSHEET */
+.factsheet-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0;
+border: 1px solid rgba(16,157,98,0.15);
+}
+.fact-item {
+padding: 1.2rem 1.5rem;
+border-bottom: 1px solid rgba(16,157,98,0.1);
+border-right: 1px solid rgba(16,157,98,0.1);
+}
+.fact-label {
+font-family: ‘Cinzel’, serif;
+font-size: 0.58rem;
+letter-spacing: 0.2em;
+color: var(–green);
+text-transform: uppercase;
+margin-bottom: 0.3rem;
+}
+.fact-value { font-family: ‘Noto Serif JP’, serif; font-size: 0.9rem; color: var(–white); }
 
-  /* FRUITS */
-  .fruits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: rgba(16,157,98,0.1);
-    margin: 2rem 0;
-  }
-  .fruit-item {
-    background: var(--black);
-    padding: 1.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .fruit-item::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-  }
-  .fruit-spring::before { background: #4a5fa8; }
-  .fruit-summer::before { background: #c0392b; }
-  .fruit-autumn::before { background: #c9922a; }
-  .fruit-winter::before { background: #a8ddd4; }
-  .fruit-season {
-    font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    margin-bottom: 0.4rem;
-    color: var(--green-bright);
-  }
-  .fruit-name { font-family: 'Noto Sans JP', sans-serif; font-size: 0.9rem; color: var(--white); opacity: 0.85; }
+/* FRUITS */
+.fruits-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1px;
+background: rgba(16,157,98,0.1);
+margin: 2rem 0;
+}
+.fruit-item {
+background: var(–black);
+padding: 1.5rem;
+position: relative;
+overflow: hidden;
+}
+.fruit-item::before {
+content: ‘’;
+position: absolute;
+top: 0; left: 0;
+width: 3px;
+height: 100%;
+}
+.fruit-spring::before { background: #4a5fa8; }
+.fruit-summer::before { background: #c0392b; }
+.fruit-autumn::before { background: #c9922a; }
+.fruit-winter::before { background: #a8ddd4; }
+.fruit-season {
+font-family: ‘Cinzel’, serif;
+font-size: 0.65rem;
+letter-spacing: 0.2em;
+margin-bottom: 0.4rem;
+color: var(–green-bright);
+}
+.fruit-name { font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.9rem; color: var(–white); opacity: 0.85; }
 
-  /* REMASTER */
-  .remaster-box {
-    border: 1px solid rgba(16,157,98,0.3);
-    padding: 2rem;
-    background: rgba(16,157,98,0.03);
-    position: relative;
-    margin: 2rem 0;
-  }
-  .remaster-box::before {
-    content: '✦ REMASTERED EDITION';
-    font-family: 'Cinzel', serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.4em;
-    color: var(--green);
-    position: absolute;
-    top: -0.6em; left: 1.5rem;
-    background: var(--black);
-    padding: 0 0.5rem;
-  }
+/* REMASTER */
+.remaster-box {
+border: 1px solid rgba(16,157,98,0.3);
+padding: 2rem;
+background: rgba(16,157,98,0.03);
+position: relative;
+margin: 2rem 0;
+}
+.remaster-box::before {
+content: ‘✦ REMASTERED EDITION’;
+font-family: ‘Cinzel’, serif;
+font-size: 0.6rem;
+letter-spacing: 0.4em;
+color: var(–green);
+position: absolute;
+top: -0.6em; left: 1.5rem;
+background: var(–black);
+padding: 0 0.5rem;
+}
 
-  /* ABOUT */
-  .about-photo {
-    width: 160px; height: 160px;
-    object-fit: cover; object-position: 60% 30%;
-    border-radius: 4px; filter: saturate(0.85);
-    flex-shrink: 0;
-  }
-  .about-name { font-family: 'Noto Serif JP', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 0.3rem; }
-  .about-role { font-family: 'Noto Sans JP', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--green); margin-bottom: 1.2rem; }
+/* ABOUT */
+.about-photo {
+width: 160px; height: 160px;
+object-fit: cover; object-position: 60% 30%;
+border-radius: 4px; filter: saturate(0.85);
+flex-shrink: 0;
+}
+.about-name { font-family: ‘Noto Serif JP’, serif; font-size: 1.2rem; color: var(–white); margin-bottom: 0.3rem; }
+.about-role { font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; color: var(–green); margin-bottom: 1.2rem; }
 
-  /* CREDITS */
-  .credits-block { margin-bottom: 2rem; }
-  .credits-names { font-family: 'Noto Sans JP', sans-serif; font-size: 0.85rem; color: var(--text); opacity: 0.7; line-height: 2; }
-  .translators-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem 2rem;
-    margin-top: 0.5rem;
-  }
-  .translator-item { font-family: 'Noto Sans JP', sans-serif; font-size: 0.85rem; opacity: 0.75; }
-  .translator-lang { color: var(--green-bright); font-size: 0.75rem; display: block; margin-bottom: 0.1rem; }
+/* CREDITS */
+.credits-block { margin-bottom: 2rem; }
+.credits-names { font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.85rem; color: var(–text); opacity: 0.7; line-height: 2; }
+.translators-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0.5rem 2rem;
+margin-top: 0.5rem;
+}
+.translator-item { font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.85rem; opacity: 0.75; }
+.translator-lang { color: var(–green-bright); font-size: 0.75rem; display: block; margin-bottom: 0.1rem; }
 
-  /* CONTACT */
-  .social-link {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    color: var(--text-dim); text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif; font-size: 0.85rem;
-    transition: color 0.2s;
-  }
-  .social-link:hover { color: var(--cyan); }
+/* CONTACT */
+.social-link {
+display: inline-flex; align-items: center; gap: 0.5rem;
+color: var(–text-dim); text-decoration: none;
+font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.85rem;
+transition: color 0.2s;
+}
+.social-link:hover { color: var(–cyan); }
 
-  /* DIVIDER */
-  .divider { width: 60px; height: 1px; background: var(--green); margin: 2rem 0; opacity: 0.5; }
+/* DIVIDER */
+.divider { width: 60px; height: 1px; background: var(–green); margin: 2rem 0; opacity: 0.5; }
 
-  /* COLOR SWATCHES */
-  .color-swatches { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
-  .swatch { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
-  .swatch-color { width: 50px; height: 50px; border: 1px solid rgba(255,255,255,0.1); }
-  .swatch-hex { font-family: 'Noto Sans JP', sans-serif; font-size: 0.62rem; color: var(--text-dim); }
+/* COLOR SWATCHES */
+.color-swatches { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
+.swatch { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.swatch-color { width: 50px; height: 50px; border: 1px solid rgba(255,255,255,0.1); }
+.swatch-hex { font-family: ‘Noto Sans JP’, sans-serif; font-size: 0.62rem; color: var(–text-dim); }
 
-  /* LIGHTBOX */
-  .lb-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.92); z-index: 10000;
-    align-items: center; justify-content: center; cursor: zoom-out;
-  }
-  .lb-overlay.active { display: flex; }
-  .lb-overlay img { max-width: 90vw; max-height: 90vh; object-fit: contain; box-shadow: 0 0 60px rgba(0,0,0,0.8); }
-  .lb-close {
-    position: absolute; top: 1.5rem; right: 1.5rem;
-    color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s;
-  }
-  .lb-close:hover { color: white; }
+/* LIGHTBOX */
+.lb-overlay {
+display: none; position: fixed; inset: 0;
+background: rgba(0,0,0,0.92); z-index: 10000;
+align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.active { display: flex; }
+.lb-overlay img { max-width: 90vw; max-height: 90vh; object-fit: contain; box-shadow: 0 0 60px rgba(0,0,0,0.8); }
+.lb-close {
+position: absolute; top: 1.5rem; right: 1.5rem;
+color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s;
+}
+.lb-close:hover { color: white; }
 
-  /* FOOTER */
-  footer {
-    text-align: center; padding: 3rem 2rem;
-    border-top: 1px solid rgba(16,157,98,0.1);
-    font-family: 'Cinzel', serif; font-size: 0.65rem;
-    letter-spacing: 0.3em; color: var(--green); opacity: 0.4;
-  }
+/* FOOTER */
+footer {
+text-align: center; padding: 3rem 2rem;
+border-top: 1px solid rgba(16,157,98,0.1);
+font-family: ‘Cinzel’, serif; font-size: 0.65rem;
+letter-spacing: 0.3em; color: var(–green); opacity: 0.4;
+}
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(12px); }
+to { opacity: 1; transform: translateY(0); }
+}
 
-  @media (max-width: 600px) {
-    .fruits-grid { grid-template-columns: 1fr; }
-    .container { padding: 0 1.2rem; }
-    section { padding: 3.5rem 0; }
-  }
+@media (max-width: 600px) {
+.fruits-grid { grid-template-columns: 1fr; }
+.container { padding: 0 1.2rem; }
+section { padding: 3.5rem 0; }
+}
 </style>
+
 </head>
 <body>
 
 <!-- HERO -->
+
 <div class="hero">
   <div class="press-kit-label">プレスキット — 2026</div>
   <img src="https://raw.githubusercontent.com/xamixem/tjikko-presskit/main/LibraryLogo2.png" alt="Essence of the Tjikko Logo" style="width:min(420px,80vw);margin-bottom:1.5rem;animation:fadeIn 1s 0.1s ease both;position:relative;z-index:1">
@@ -335,6 +349,7 @@
 <div class="container">
 
   <!-- FACTSHEET -->
+
   <section>
     <div class="section-label">基本情報</div>
     <h2>Factsheet</h2>
@@ -356,8 +371,12 @@
         <div class="fact-value">約2時間</div>
       </div>
       <div class="fact-item">
-        <div class="fact-label">リリース日</div>
-        <div class="fact-value">2022年2月（初版）<br>2026年2月22日（リマスター版）</div>
+        <div class="fact-label">初版リリース</div>
+        <div class="fact-value">開発期間：9ヶ月<br>2022年2月2日</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-label">リマスター版</div>
+        <div class="fact-value">開発期間：6ヶ月<br>2026年2月22日</div>
       </div>
       <div class="fact-item">
         <div class="fact-label">価格</div>
@@ -375,44 +394,51 @@
   </section>
 
   <!-- DESCRIPTION -->
+
   <section>
     <div class="section-label">ゲームについて</div>
     <h2>ゲーム内容</h2>
     <p>『Essence of the Tjikko』は、地下7階建ての植物学研究所を舞台にしたレトロ3Dパズルアドベンチャーだ。30以上の部屋がつながる縦型ダンジョンで、シンプルな操作が組み合わさり、予想外の解法を生み出す。</p>
     <p>ゲームプレイは基本操作で成り立っている――段差を登る、箱を押す、エネルギー球を運ぶ、泳ぐ。そこに、能力と見た目を変える4つの季節の果実が加わる。シンプルな組み合わせが、好奇心（または力技）に応えるパズル解法を生み出す：</p>
 
-    <div class="fruits-grid">
-      <div class="fruit-item fruit-spring">
-        <div class="fruit-season">SPRING — 春（ハイドロプラム）</div>
-        <div class="fruit-name">水面バウンド</div>
-      </div>
-      <div class="fruit-item fruit-summer">
-        <div class="fruit-season">SUMMER — 夏（パイロベリー）</div>
-        <div class="fruit-name">爆発的なスピード</div>
-      </div>
-      <div class="fruit-item fruit-autumn">
-        <div class="fruit-season">AUTUMN — 秋（メモナッツ）</div>
-        <div class="fruit-name">不思議な視界</div>
-      </div>
-      <div class="fruit-item fruit-winter">
-        <div class="fruit-season">WINTER — 冬（クリオピア）</div>
-        <div class="fruit-name">氷のジャンプ</div>
-      </div>
-    </div>
+```
+<div class="fruits-grid">
+  <div class="fruit-item fruit-spring">
+    <div class="fruit-season">SPRING — 春（ハイドロプラム）</div>
+    <div class="fruit-name">水面バウンド</div>
+  </div>
+  <div class="fruit-item fruit-summer">
+    <div class="fruit-season">SUMMER — 夏（パイロベリー）</div>
+    <div class="fruit-name">爆発的なスピード</div>
+  </div>
+  <div class="fruit-item fruit-autumn">
+    <div class="fruit-season">AUTUMN — 秋（メモナッツ）</div>
+    <div class="fruit-name">不思議な視界</div>
+  </div>
+  <div class="fruit-item fruit-winter">
+    <div class="fruit-season">WINTER — 冬（クリオピア）</div>
+    <div class="fruit-name">氷のジャンプ</div>
+  </div>
+</div>
 
-    <p>この世界では、植物のネットワークがシステムのように機能する――根はケーブル、樹液はデータ、植物の仕組みはコンピュータのように動く。自然とテクノロジーは同じ言語で語り合い、半植物・半人間の主人公はその両方に通じている。</p>
-    <p>見た目は2000年代の3Dの雰囲気を現代の技術で表現した、意図的な美術的選択だ。4:3の画面比率も意図的な選択であり、16:9のゲームとは違う、おとぎ話のような感覚をもたらす。世界は絵本のイラストのようにフレームに収まっている。</p>
-    <p style="font-style:italic;opacity:0.7;font-family:'Noto Serif JP',serif">ゼルダシリーズのダンジョンにインスパイアされながら、独自の物語を語る――幼少期、成長、そして光へ向かう本能の物語。</p>
+<p>この世界では、植物のネットワークがシステムのように機能する――根はケーブル、樹液はデータ、植物の仕組みはコンピュータのように動く。自然とテクノロジーは同じ言語で語り合い、半植物・半人間の主人公はその両方に通じている。</p>
+<p>見た目は2000年代の3Dの雰囲気を現代の技術で表現した、意図的な美術的選択だ。4:3の画面比率も意図的な選択であり、16:9のゲームとは違う、おとぎ話のような感覚をもたらす。世界は絵本のイラストのようにフレームに収まっている。</p>
+<p style="font-style:italic;opacity:0.7;font-family:'Noto Serif JP',serif">ゼルダシリーズのダンジョンにインスパイアされながら、独自の物語を語る――幼少期、成長、そして光へ向かう本能の物語。</p>
 
-    <div class="divider"></div>
+<p>植物学的ファンタジーのオリジナル冒険——初期の3DゼルダにインスパイアされたEssence of the Tjikko。廃墟の研究所の奥深くで緑の子が目覚め、光へと昇っていく。</p>
 
-    <div class="remaster-box">
-      <p style="margin-bottom:0.8rem">4年間の開発を経て、Unreal Engine 5で完全に作り直された。照明・テクスチャ・ポストプロセスの全面見直し、新UIシステム、季節の果実の拡張と新エフェクト、難易度と収集要素の調整、50以上のバグ修正。</p>
-      <p style="margin:0;opacity:0.6;font-size:0.85rem">2026年2月22日リリース――ゼルダ40周年記念日の翌日。</p>
-    </div>
+<div class="divider"></div>
+
+<div class="remaster-box">
+  <p style="margin-bottom:0.8rem">Unreal Engine 5で完全に再構築された——初版リリースから4年後。新しいゲームプレイ、季節の果実システム、アセット・キャラクター・ビジュアルレンダリングの全面改修。新UIシステム、アセット最適化、難易度バランス調整、その他各種修正。</p>
+  <p style="margin:0;opacity:0.6;font-size:0.85rem">2026年2月22日リリース――ゼルダ40周年記念日。</p>
+</div>
+```
+
   </section>
 
   <!-- TRAILER -->
+
   <section>
     <div class="section-label">トレーラー</div>
     <h2>Trailer — リマスター版</h2>
@@ -425,6 +451,7 @@
   </section>
 
   <!-- SCREENSHOTS -->
+
   <section>
     <div class="section-label">スクリーンショット</div>
     <h2>Screenshots</h2>
@@ -444,6 +471,7 @@
   </section>
 
   <!-- DEVELOPER -->
+
   <section>
     <div class="section-label">開発者</div>
     <h2>La Revria Studio</h2>
@@ -452,31 +480,47 @@
       <div>
         <div class="about-name">Maxime Carcaillon</div>
         <div class="about-role">ソロ開発者 · パリ、フランス</div>
-        <p>地質学を学んだ後にゲームアートに転向したマクシムは、地形・自然システム・景観の持つ意味から形成された独自の視点で世界を作る。Ubisoftで<em>Tom Clancy's The Division 2</em>や<em>AGOS</em>に携わった後、La Revria Studioを設立してEssence of the Tjikkoの開発を始めた。</p>
-        <p>La Revria Studioは、コンポーザー・翻訳者・プレイテスターなど、プロジェクトを信じる仲間に支えられた一人の制作体制だ。この物語を形にするために、時間と力を貸してくれた友人や元同僚たちがいる。</p>
+        <p>地質学を専攻した後、ゲームアートへ転向した私は、地形・自然システム・景観の象徴性に裏打ちされた独自の視点で世界を作る。Ubisoftで<em>Tom Clancy's The Division 2</em>や<em>AGOS</em>に携わった経験が、Essence of the Tjikkoを始める礎となった。</p>
+        <p>La Revria Studioは私のアーティストレーベルであり、コンポーザー・翻訳者・プレイテスターなど、プロジェクトを信じる仲間に支えられている。この物語を形にするために、時間と力を貸してくれた友人や元同僚たちがいる。</p>
+        <p style="margin-top:0.5rem"><a href="https://mylink.la/tjikkogame" target="_blank" style="color:var(--cyan);text-decoration:none;font-size:0.85rem">mylink.la/tjikkogame</a><br><a href="https://www.artstation.com/xamix" target="_blank" style="color:var(--cyan);text-decoration:none;font-size:0.85rem">artstation.com/xamix</a></p>
       </div>
     </div>
   </section>
 
   <!-- HISTORY -->
+
   <section>
     <div class="section-label">開発の歩み</div>
     <h2>はじまり</h2>
     <p>Essence of the Tjikkoはアヌシーで生まれた――湖が舞台、山々が背景、季節ごとに場面が変わる美しい街。2018年、Ubisoft勤務のかたわら、私は余暇にエルデヴェンの世界を書き始めた。アヌシーの地形とバイオームのイメージ、環境の持つ意味を結びつけようとしながら――地質学の学生時代に読んだ『昔話の魔力』から考え続けてきたテーマだ。</p>
     <p>2021年、将来が見えない中で、アーティストとして意味のあるものを作ろうと決めた。フリーランスになり、9ヶ月でTjikkoの最初のバージョンを完成させると決めた。2022年2月にリリースし、小さなイベントに持ち込み、配信者たちに紹介した……正直な出来だったが、未完成だった。難しすぎて後回しにするゲームのように、いつか戻れると知りながら棚に戻した。</p>
 
-    <div class="divider"></div>
-    <h2 style="margin-top:0">その後</h2>
-    <p>その後の数年間は、業界での貴重な学びの時期だった。そして2025年9月、準備が整ったと感じ、明確な目標を持ってTjikkoに戻った：ゼルダ40周年記念日である2026年2月21日に向けたリマスター版の完成。</p>
-    <p>リマスターは、あの年月が教えてくれたすべてを反映している。ゲームの半分以上が――技術的にも芸術的にも――作り直された。照明、テクスチャ、レベルデザインの細部、難易度のバランス……</p>
-    <p>振り返れば、出会った人々の支えによって、Tjikkoとともに私も成長してきた。元同僚たちがデザインとビジュアルに目を貸してくれた。10言語のネイティブスピーカーたちが、この植物学的な物語を自分たちの言葉で伝えてくれた。そして友人フィリップ・ラインハートの音楽が、この世界に感情の鼓動を与えてくれた。</p>
-    <p style="font-style:italic;opacity:0.65;font-family:'Noto Serif JP',serif">ゲームを作るには時間がかかる。でも、それが育っていく様子を見ることは、それ自体が喜びだ。次の幕が楽しみでならない。</p>
-    <p><em>Essence of the Tjikko — プロローグ</em>は、より大きな冒険の第一章だ。完全版では広大な地下世界を目指している：5つのダンジョン、Tjikkoの根の下に掘られた中心ハブ、地下湖、神殿、密林、村――時間の止まった文明。次の章は現在開発中。</p>
+```
+<div class="divider"></div>
+<h2 style="margin-top:0">その後</h2>
+<p>その後の数年間は、業界での貴重な学びの時期だった。そして2025年9月、準備が整ったと感じ、明確な目標を持ってTjikkoに戻った：ゼルダ40周年記念日である2026年2月21日に向けたリマスター版の完成。</p>
+<p>リマスターは、あの年月が教えてくれたすべてを反映している。ゲームの半分以上が――技術的にも芸術的にも――作り直された。照明、テクスチャ、レベルデザインの細部、難易度のバランス……</p>
+<p>振り返れば、出会った人々の支えによって、Tjikkoとともに私も成長してきた。元同僚たちがデザインとビジュアルに目を貸してくれた。10言語のネイティブスピーカーたちが、この植物学的な物語を自分たちの言葉で伝えてくれた。そして友人フィリップ・ラインハートの音楽が、この世界に感情の鼓動を与えてくれた。</p>
+<p style="font-style:italic;opacity:0.65;font-family:'Noto Serif JP',serif">ゲームを作るには時間がかかる。でも、それが育っていく様子を見ることは、それ自体が喜びだ。次の幕が楽しみでならない。</p>
+<p><em>Essence of the Tjikko — プロローグ</em>は、より大きな冒険の第一章だ。完全版では広大な地下世界を目指している：5つのダンジョン、Tjikkoの根の下に掘られた中心ハブ、地下湖、神殿、密林、村――時間の止まった文明。次の章は現在開発中。</p>
+```
+
   </section>
 
   <!-- PRESS & CREATORS -->
+
   <section>
     <div class="section-label">プレス・配信者・クリエイター</div>
+    <h2>プレイした配信者</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem;margin-bottom:3rem">
+      <a href="https://www.twitch.tv/nastr0" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">nastr0</span></a>
+      <a href="https://www.twitch.tv/seishaya" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">seishaya</span></a>
+      <a href="https://twitch.tv/kotahthebrave" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Kotahthebrave</span></a>
+      <a href="https://www.twitch.tv/chochklah" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Chochklah</span></a>
+      <a href="https://twitch.tv/ayoslim" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Ayoslim</span></a>
+      <a href="https://twitch.tv/fenkybandit" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Fenkybandit</span></a>
+      <a href="https://twitch.tv/naniquoi" target="_blank" style="display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;border:1px solid rgba(16,157,98,0.15);text-decoration:none;color:var(--text);transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,157,98,0.4)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(16,157,98,0.15)';this.style.color='var(--text)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="#9146ff"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg><span style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.1em">Naniquoi</span></a>
+    </div>
     <h2>ビジュアルアイデンティティ</h2>
     <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem">
       <div style="display:flex;flex-direction:column;align-items:center;gap:1rem">
@@ -504,6 +548,7 @@
   </section>
 
   <!-- CREDITS -->
+
   <section>
     <div class="section-label">クレジット</div>
     <h2>Credits</h2>
@@ -540,6 +585,7 @@
   </section>
 
   <!-- CONTACT -->
+
   <section>
     <div class="section-label">お問い合わせ</div>
     <h2>コンタクト</h2>
@@ -560,7 +606,11 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         @tjikko.dev
       </a>
-      <span style="color:var(--text-dim);font-size:0.9rem"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea87c4898b98898b8386868584aa8d878b8386c4898587">[email&#160;protected]</a></span>
+      <a href="https://www.tiktok.com/@essenceofthetjikko" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+        @essenceofthetjikko
+      </a>
+      <span style="display:inline-flex;align-items:center;gap:0.4rem;color:var(--text-dim);font-size:0.9rem"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.6;flex-shrink:0"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>larevria.contact@gmail.com</span>
     </div>
   </section>
 
@@ -573,7 +623,7 @@
   <span class="lb-close" onclick="closeLightbox()">✕</span>
   <img id="lb-img" src="" alt="">
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   document.getElementById('lb-img').addEventListener('click', function(e) { e.stopPropagation(); });
   function openLightbox(src) { document.getElementById('lb-img').src = src; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
   function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
@@ -587,6 +637,11 @@
     <a href="presskit_en.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">EN</a>
     <a href="presskit_de.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">DE</a>
     <a href="presskit_es.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">ES</a>
+    <a href="presskit_it.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">IT</a>
+    <a href="presskit_pl.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">PL</a>
+    <a href="presskit_ru.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">RU</a>
+    <a href="presskit_ko.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">KO</a>
+    <a href="presskit_zh.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.15);font-size:0.65rem;color:var(--text-dim);text-decoration:none;font-family:'Cinzel',serif">ZH</a>
     <a href="presskit_ja.html" style="padding:0.25rem 0.6rem;border:1px solid rgba(77,219,138,0.5);font-size:0.65rem;color:var(--cyan);text-decoration:none;font-family:'Cinzel',serif">JA</a>
   </div>
 </div>
